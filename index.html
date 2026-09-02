@@ -54,7 +54,7 @@
   .body p { margin: 0; }
   .body a { color: #3A2A22; text-decoration: none; border-bottom: 1px solid #E8AEC0; }
   .body a:hover { color: #C0447A; border-bottom-color: #C0447A; }
-  .about-grid { width: 100%; max-width: 800px; display: grid; grid-template-columns: 168px 1fr; gap: clamp(28px, 5vw, 56px); align-items: start; }
+  .about-grid { width: 100%; max-width: 920px; display: grid; grid-template-columns: 168px 1fr; gap: clamp(28px, 5vw, 56px); align-items: start; }
   .about-nav { display: flex; flex-direction: column; gap: 4px; font-family: 'Zen Old Mincho', serif; font-size: 15px; letter-spacing: 0.04em; line-height: 1.5; border-right: 1px solid #F0DCE2; padding-right: clamp(16px, 3vw, 32px); }
   .about-nav span { cursor: pointer; padding: 5px 0; color: #C0447A; border-bottom: 1px solid transparent; align-self: flex-start; }
   .about-nav span:hover { color: #4A3228; }
@@ -66,6 +66,11 @@
   .tabpane { display: none; flex-direction: column; gap: 20px; }
   .tabpane.on { display: flex; }
   .todo { color: #C0447A; }
+  .era { display: grid; grid-template-columns: 132px 1fr; gap: 24px; align-items: baseline; }
+  .era-y { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #C0447A; line-height: 2.6; }
+  .era-b { display: flex; flex-direction: column; gap: 16px; }
+  .era-rule { width: 60px; height: 1px; background: #E8AEC0; margin: 6px 0; }
+  @media (max-width: 620px) { .era { grid-template-columns: 1fr; gap: 6px; } .era-y { line-height: 1.6; } }
   .plainlist { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; }
   .plainlist li { display: grid; grid-template-columns: 14px 1fr; gap: 12px; }
   .plainlist .plus { color: #C0447A; }
@@ -131,15 +136,54 @@
     <div class="about-body">
       <div class="tabpane on" data-pane="bio">
         <p>I'm Amina Green. I previously worked as an idol in Japan under the name aminyan or Amina du Jean. I'm currently a content creator and technologist living in San Francisco, California.</p>
-        <p>Before that, I worked as head of data at a venture-backed creator economy startup and in human-computer interaction research.</p>
-        <p>I have undergraduate education in both Tokyo and London, UK, with graduate studies in California in Computer Science/Human Computer Interaction, focused on biosensing wearables.</p>
-        <p>As of Fall 2026, I'm a <a href="https://www.framefellowship.com/" target="_blank" rel="noopener">Frame Fellow</a>, embedded at <a href="https://www.matsprogram.org/" target="_blank" rel="noopener">Machine Alignment, Transparency, and Security (MATS)</a> leading AI safety content production.</p>
+        <div class="era-rule"></div>
+        <div class="era">
+          <div class="era-y">2010 ~ 2014</div>
+          <div class="era-b">
+            <p>At eleven years old, in 2008, I began taking private Japanese lessons in my small Michigan town.</p>
+            <p>From there I started streaming on Nico Nico Douga, Japan's proto-Twitch. In the same period I produced a chiptune album with Piko Piko Detroit, a local chiptune collective, and as a high schooler performed at the Detroit Electronic Music Festival and on smaller stages around Ann Arbor.</p>
+          </div>
+        </div>
+        <div class="era">
+          <div class="era-y">2014 ~ 2017</div>
+          <div class="era-b">
+            <p>I received a contract to perform as an idol in Japan, and appeared on the prime-time variety show <span lang="ja">「YOUは何しに日本へ？」</span>.</p>
+            <p>I appeared on other television programs and worked with companies including <a href="https://www.bandainamco.co.jp/en/" target="_blank" rel="noopener" style="">Bandai Namco</a>. I received an award in <a href="https://www.kodansha.co.jp/" target="_blank" rel="noopener" style="">Kodansha</a>'s Miss iD 2016, and was profiled in Forbes online, Playboy Japan and <a href="https://www.japantimes.co.jp/" target="_blank" rel="noopener" style="">The Japan Times</a>.</p>
+            <p>Alongside this I studied Economics at Temple University, Japan.</p>
+          </div>
+        </div>
+        <div class="era">
+          <div class="era-y">2017 ~ 2020</div>
+          <div class="era-b">
+            <p>I lived in London and studied anthropology and sociology, finishing an undergraduate dissertation on Eastern European women and labor.</p>
+            <p>I served on the board of <a href="https://tampep.eu/" target="_blank" rel="noopener" style="">TAMPEP</a>, an Open Society funded organization, which led to speaking at Amnesty International and at an EU parliamentary meeting in 2018. My last major activism event was in Stockholm in 2019.</p>
+          </div>
+        </div>
+        <div class="era">
+          <div class="era-y">2020 ~ 2023</div>
+          <div class="era-b">
+            <p>I worked for a non-profit in San Francisco and moved into industry, teaching myself Python on nights and weekends.</p>
+          </div>
+        </div>
+        <div class="era">
+          <div class="era-y">2023 ~ 2025</div>
+          <div class="era-b">
+            <p>I completed a Master's in Computer Science and Human-Computer Interaction, with research on biosensing-enabled agents and empathic computing.</p>
+            <p>I worked as Head of Data at a venture-backed creator economy startup, and on research into bridging bots at the <a href="https://www.plurality.institute/" target="_blank" rel="noopener" style="">Plurality Institute</a>.</p>
+          </div>
+        </div>
+        <div class="era">
+          <div class="era-y">Sept 2026 ~ Present</div>
+          <div class="era-b">
+            <p>I'm a <a href="https://www.framefellowship.com/" target="_blank" rel="noopener" style="">Frame Fellow</a>, embedded at <a href="https://www.matsprogram.org/" target="_blank" rel="noopener" style="">Machine Alignment, Transparency, and Security (MATS)</a>, leading AI safety content production — and producing content on Instagram and X.</p>
+          </div>
+        </div>
       </div>
       <div class="tabpane" data-pane="care">
-        <p>As an undergraduate student and throughout my early 20s, I dedicated my academic studies, dissertation and work to the labor rights of migrant women, particularly from Eastern Europe and the Global South.</p>
-        <p>As a student I served on the board of <a href="https://tampep.eu/" target="_blank" rel="noopener">TAMPEP EU</a>, which allowed me to speak at Amnesty International in London in 2018 and attend a European Union special parliamentary meeting. I also participated in a protest in Stockholm, Sweden in 2019.</p>
-        <p>From 2022 onwards I began to work in industry and for tech non-profits. I still care deeply about these causes, but I don't directly work for any of them any more.</p>
-        <p>At the moment I care about building communities, strong interpersonal relationships and empowering others to do the same. I've recently begun a project called kanpai where community stewards can be connected with corporate sponsors and individual patrons. Join the waitlist @ <a href="https://kanpai.events" target="_blank" rel="noopener">kanpai.events</a></p>
+        <p>Living a good life by treating the people immediately around me well is the most important thing to me. Living with a sense of integrity and being joyful is the best way to give back, in my opinion.</p>
+        <p>As an undergraduate and through my early 20s, my academic studies, dissertation and work went to the labor rights of migrant women, particularly from Eastern Europe and the Global South. I don't work in that world day to day any more, but it taught me what I still believe: that people are best protected by the people around them.</p>
+        <p>Growing up around Detroit in the middle of de-industrialization, then working in labor rights and studying anthropology and sociology, left me alert to what technology does to social infrastructure. It's why I work on AI safety now. I'm a capitalist, but I believe in public policy that lets people flourish under capitalism — humane, and clear about where responsibility sits.</p>
+        <p>So what I care about now is building communities, strong interpersonal relationships and empowering others to do the same. I've recently begun a project called kanpai, where community stewards can be connected with corporate sponsors and individual patrons. Join the waitlist @ <a href="https://kanpai.events" target="_blank" rel="noopener">kanpai.events</a></p>
       </div>
       <div class="tabpane" data-pane="hobbies">
         <ul class="plainlist">
@@ -177,11 +221,12 @@
 
 <section id="contact" class="view page">
   <div class="c-label">Contact</div>
-  <div class="c-mail">contact me for work<br><a href="mailto:hello@amina-io.com">hello at amina-io.com</a></div>
+  <div class="c-mail">drop a line!<br><a href="mailto:hello@amina-io.com">hello at amina-io.com</a></div>
   <div class="socials">
     <a href="https://x.com/amina_io" target="_blank" rel="noopener">x</a>
     <a href="https://instagram.com/bimbollectual" target="_blank" rel="noopener">instagram</a>
     <a href="https://substack.com/@aminaio" target="_blank" rel="noopener">substack</a>
+    <a href="https://github.com/Amina-io" target="_blank" rel="noopener">github</a>
   </div>
   <a class="back" href="#">← back</a>
 </section>
