@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://amina-io.com/sitemap.xml
