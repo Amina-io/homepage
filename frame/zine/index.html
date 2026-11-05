@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amina Zine</title>
+<meta name="description" content="A digital zine introducing Amina Green.">
+<link rel="icon" href="../../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/exhibit.css">
+</head>
+<body>
+<main class="zine-wrap gutter">
+  <div class="window">
+    <div class="titlebar"><h1 id="z-title">ZINE</h1><a class="close" href="../world/" aria-label="Close the zine and go to Amina's World" title="Amina's World">×</a></div>
+    <nav class="menubar" aria-label="Exhibit">
+      <a href="../">Exhibit home</a>
+      <a href="../world/">Amina's World</a>
+      <a href="../game/">Play the Predictor</a>
+    </nav>
+    <div class="body"><div class="spreads" id="spreads"></div></div>
+    <div class="status"><span id="z-count"></span><span>amina-io.com/frame/zine</span></div>
+  </div>
+</main>
+<script src="../content.js"></script>
+<script src="../assets/exhibit.js"></script>
+<script>
+(function () {
+  var Z = window.EXHIBIT.zine, UI = window.ExhibitUI, el = UI.el;
+  document.getElementById("z-title").textContent = Z.title;
+  var wrap = document.getElementById("spreads");
+  Z.pages.forEach(function (p, i) {
+    wrap.appendChild(el("section", { class: "page" },
+      el("p", { class: "num", text: "PAGE " + (i + 1) + " / " + Z.pages.length }),
+      el("h2", { text: p.heading }),
+      UI.media(p.image, p.placeholder, p.heading),
+      p.body ? el("p", { text: p.body }) : null,
+      p.todo ? el("p", { class: "todo", text: p.todo }) : null
+    ));
+  });
+  document.getElementById("z-count").textContent = Z.pages.length + " pages";
+})();
+</script>
+</body>
+</html>
