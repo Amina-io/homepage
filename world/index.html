@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amina Green</title>
+<meta name="description" content="Amina Green: writer, researcher and media creator. Featured work and how to get in touch.">
+<link rel="icon" href="../../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Silkscreen:wght@400;700&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Amina's World: airy, modern, elegant, a little Japanese-eclectic.
+   Layout: neon contact banner, then a centered column: portrait + intro, then featured work rows. */
+:root {
+  --bg: #FBF9F5;
+  --ink: #232022;
+  --soft-ink: #5E5860;
+  --line: rgba(35, 32, 34, .12);
+  --pink: #FF3EA5;
+  --pink-ink: #C8157A;
+  --yellow: #FFE500;
+  --lavender: #B9AEDF;
+  --blush: #FCE6EF;
+  --mint: #E4F3F1;
+  --mincho: "Shippori Mincho", "Hiragino Mincho ProN", Georgia, serif;
+  --sans: "Zen Kaku Gothic New", "Helvetica Neue", Arial, sans-serif;
+  --pixel: "Silkscreen", "Courier New", monospace;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { background: #BFC3E0; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; background: #BFC3E0 url("../img/lavender-bg.jpg") center / cover no-repeat; }
+/* Smooth rounded blocks that sit on the paper background */
+.block { background: rgba(251, 249, 245, .92); border-radius: 32px; box-shadow: 0 30px 80px rgba(60, 55, 110, .18), 0 2px 0 rgba(255, 255, 255, .6) inset; }
+body {
+  margin: 0; min-height: 100vh; color: var(--ink); font: 16px/1.75 var(--sans);
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 920px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Contact banner: iridescent, shiny */
+.contact { position: relative; overflow: hidden;
+  background: linear-gradient(115deg, #FBD3E9 0%, #D9D2FF 22%, #C8F1F4 44%, #FFF4C7 62%, #F9D0F0 80%, #CFE0FF 100%);
+  background-size: 300% 100%; animation: iris 12s ease-in-out infinite alternate; }
+.contact::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, .75) 45%, transparent 60%);
+  background-size: 250% 100%; animation: shine 5s ease-in-out infinite; mix-blend-mode: soft-light; }
+@keyframes iris { to { background-position: 100% 0; } }
+@keyframes shine { 0% { background-position: 150% 0; } 60%, 100% { background-position: -50% 0; } }
+.contact .wrap { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; padding-block: 14px; }
+.contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.pill { display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 18px; border-radius: 999px; background: rgba(255, 255, 255, .72); color: var(--ink); text-decoration: none; font-weight: 700; font-size: 14px; border: 1px solid rgba(255, 255, 255, .9); box-shadow: 0 4px 14px rgba(90, 80, 160, .12); backdrop-filter: blur(6px); transition: background .15s, transform .15s; }
+.pill:hover { background: #fff; transform: translateY(-1px); }
+.pill small { font: 12px var(--mono); color: var(--pink-ink); font-weight: 400; }
+@media (prefers-reduced-motion: reduce) { .contact, .contact::after { animation: none; } }
+
+/* Hero */
+main.wrap { padding-block: clamp(28px, 5vw, 56px); display: flex; flex-direction: column; gap: clamp(20px, 3vw, 32px); }
+.hero { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(24px, 5vw, 56px); align-items: center; padding: clamp(22px, 4.5vw, 52px); }
+.portrait { aspect-ratio: 4 / 5; border-radius: 28px; overflow: hidden; box-shadow: 0 24px 60px rgba(35, 32, 34, .14); }
+.portrait img { width: 100%; height: 100%; object-fit: cover; }
+.eyebrow { font: 12px/1.4 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--pink-ink); }
+.name { font: 800 clamp(44px, 8vw, 84px)/1 var(--mincho); letter-spacing: -.01em; margin: 10px 0 18px; }
+.name .spark { color: var(--pink); font-size: .45em; vertical-align: .9em; margin-left: .1em; }
+.blurb { font-size: clamp(16px, 2vw, 18px); color: var(--soft-ink); max-width: 46ch; }
+@media (max-width: 620px) { .hero { grid-template-columns: 1fr; } .portrait { max-width: 260px; } }
+
+/* Placeholder art */
+.ph { width: 100%; height: 100%; display: grid; place-items: center; text-align: center; padding: 14px;
+  background: linear-gradient(135deg, var(--blush), var(--mint) 55%, #EEE9FA);
+  font: 10.5px/1.4 var(--mono); letter-spacing: .08em; color: var(--soft-ink); }
+
+/* Featured work */
+.section-head { display: flex; align-items: baseline; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.section-head h2 { font: 700 clamp(26px, 4vw, 34px)/1.1 var(--mincho); }
+.section-head span { font: 13px var(--mono); color: var(--soft-ink); }
+.featured { padding: clamp(22px, 4.5vw, 48px); }
+.works { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.6vw, 28px); }
+.work { display: flex; flex-direction: column; gap: 14px; padding: 14px 14px 22px; background: #fff; border-radius: 24px; box-shadow: 0 12px 32px rgba(60, 55, 110, .10); }
+.work > div:last-child { padding-inline: 8px; }
+.thumb { position: relative; aspect-ratio: 16 / 10; border-radius: 16px; overflow: hidden; box-shadow: 0 14px 36px rgba(35, 32, 34, .10); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.in-production .thumb > * { filter: grayscale(1); opacity: .55; }
+.num { font: 12px var(--mono); color: var(--soft-ink); letter-spacing: .1em; }
+.work h3 { font: 700 clamp(22px, 3.2vw, 30px)/1.2 var(--mincho); margin: 6px 0 6px; text-wrap: balance; }
+.what { font-size: 14px; font-weight: 700; color: var(--pink-ink); }
+.impact { margin-top: 8px; color: var(--soft-ink); max-width: 48ch; }
+.badge { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 6px 14px; border-radius: 999px; background: var(--yellow); font: 700 13px/1 var(--pixel); letter-spacing: .06em; color: var(--ink); box-shadow: 0 4px 12px rgba(200, 170, 0, .3); }
+.badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--pink); animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .25; } }
+.work-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.link-btn { display: inline-flex; align-items: center; gap: 6px; min-height: 42px; padding: 8px 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; color: var(--ink); background: #fff; border: 1px solid var(--line); transition: background .15s; }
+.link-btn:hover { background: var(--blush); }
+.link-btn::after { content: "→"; color: var(--pink); }
+.todo { margin-top: 10px; border: 1px dashed var(--pink); color: var(--pink-ink); padding: 6px 10px; border-radius: 8px; font: 12px/1.4 var(--mono); }
+.todo::before { content: "TO ADD · "; font-weight: 700; }
+body.hide-todos .todo { display: none; }
+.works.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 860px) { .works.three { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .works, .works.three { grid-template-columns: 1fr; } }
+
+/* Groups */
+.groups { display: flex; flex-direction: column; gap: clamp(20px, 3vw, 32px); }
+.group { padding: clamp(22px, 4.5vw, 44px); }
+.fellow { margin-top: 14px; font: 600 clamp(16px, 2vw, 18px)/1.5 var(--mincho); color: var(--ink); }
+.open { margin-top: 14px; font: 13px/1.5 var(--mono); color: var(--pink-ink); }
+.list { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; padding: 16px 20px; background: #fff; border-radius: 20px; box-shadow: 0 8px 22px rgba(60, 55, 110, .08); }
+.row h3 { margin: 0; font: 700 clamp(19px, 2.4vw, 23px)/1.25 var(--mincho); }
+.row .row-main { flex: 1 1 320px; min-width: 0; }
+.row .row-side { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.row .badge, .row .work-links { margin-top: 0; }
+.row.muted h3, .row.muted .impact { opacity: .65; }
+.posts { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.post { display: flex; flex-direction: column; gap: 10px; justify-content: space-between; padding: 16px 18px; background: #fff; border-radius: 20px; box-shadow: 0 8px 22px rgba(60, 55, 110, .08); }
+.post h3 { margin: 0; font: 700 17px/1.3 var(--mincho); }
+.post .x { font: 12px var(--mono); color: var(--soft-ink); }
+.badge.b-published { background: #E7F7EE; box-shadow: none; }
+.badge.b-published::before { background: #20A464; animation: none; }
+.badge.b-internal { background: #EEEAF7; box-shadow: none; }
+.badge.b-internal::before { background: var(--lavender); animation: none; }
+.impact.reported { font-size: 14px; border-left: 3px solid var(--yellow); padding-left: 10px; }
+
+/* Footer */
+.foot { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 28px; padding: 18px 24px; font-size: 14px; align-self: center; border-radius: 999px; }
+.foot a { text-decoration: none; border-bottom: 1px solid var(--pink); }
+.foot a:hover { color: var(--pink-ink); }
+:focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { .badge::before { animation: none; } .pill { transition: none; } }
+</style>
+</head>
+<body>
+<header class="contact" aria-label="Contact">
+  <div class="wrap">
+    <div class="contact-links">
+      <a class="pill" id="c-email" href="#"></a>
+      <a class="pill" id="c-x" href="#" target="_blank" rel="noopener"></a>
+      <a class="pill" href="https://amina-io.com" target="_blank" rel="noopener">amina-io.com</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero block" aria-label="About">
+    <div class="portrait" id="portrait"></div>
+    <div>
+      <p class="eyebrow" id="a-eyebrow"></p>
+      <h1 class="name"><span id="a-name"></span><span class="spark" aria-hidden="true">⟡</span></h1>
+      <p class="blurb" id="a-blurb"></p>
+    </div>
+  </section>
+
+  <div id="groups" class="groups"></div>
+
+  <nav class="foot block" aria-label="Exhibit">
+    <a href="../">Play the Predictor</a>
+    <a href="https://amina-io.com" target="_blank" rel="noopener">amina-io.com</a>
+  </nav>
+</main>
+
+<script src="../content.js"></script>
+<script>
+(function () {
+  "use strict";
+  var C = window.EXHIBIT;
+  function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+  function art(image, placeholder, alt) {
+    if (image) { var i = el("img"); i.src = image; i.alt = alt || ""; i.loading = "lazy"; return i; }
+    var p = el("div", "ph", placeholder ? "[ " + placeholder + " ]" : "[ IMAGE ]"); p.setAttribute("role", "img"); p.setAttribute("aria-label", "Image to come"); return p;
+  }
+
+  // TO ADD notes: hidden for visitors; add ?edit to the address to see them.
+  var editing = false;
+  try {
+    if (/[?&]edit\b/.test(location.search)) localStorage.setItem("exhibit-edit", "1");
+    if (/[?&]final\b/.test(location.search)) localStorage.removeItem("exhibit-edit");
+    editing = localStorage.getItem("exhibit-edit") === "1";
+  } catch (e) { editing = /[?&]edit\b/.test(location.search); }
+  if (!editing) document.body.classList.add("hide-todos");
+
+  // Contact banner
+  var email = document.getElementById("c-email");
+  email.href = "mailto:" + C.email;
+  email.textContent = C.email;
+  var x = document.getElementById("c-x");
+  x.href = C.contact.x.url;
+  x.appendChild(document.createTextNode("X "));
+  x.appendChild(el("small", null, C.contact.x.handle));
+
+  // About
+  var A = C.about;
+  document.getElementById("portrait").appendChild(art(A.image, A.placeholder, A.name));
+  document.getElementById("a-eyebrow").textContent = A.eyebrow;
+  document.getElementById("a-name").textContent = A.name;
+  document.getElementById("a-blurb").textContent = A.blurb;
+  var after = document.getElementById("a-blurb");
+  if (A.fellow) { var f = el("p", "fellow", A.fellow); after.after(f); after = f; }
+  if (A.open) after.after(el("p", "open", A.open));
+
+  // Groups of work
+  var LABEL = { "published": "Published", "in-editing": "In editing", "upcoming": "Upcoming", "internal": "Internal", "showcase": "At the showcase", "in-progress": "In progress" };
+  var root = document.getElementById("groups");
+  function linksEl(item) {
+    var links = (item.links || []).filter(function (l) { return l && l.url && l.url !== "#"; });
+    if (!links.length) return null;
+    var lw = el("div", "work-links");
+    links.forEach(function (l) {
+      var a = el("a", "link-btn", l.label); a.href = l.url;
+      if (/^https?:/.test(l.url)) { a.target = "_blank"; a.rel = "noopener"; }
+      lw.appendChild(a);
+    });
+    return lw;
+  }
+  function badge(status) {
+    if (!status) return null;
+    return el("span", "badge b-" + status, LABEL[status] || status);
+  }
+  function thumb(item) {
+    var t = el("div", "thumb");
+    if (item.image) {
+      var img = el("img"); img.src = item.image; img.alt = ""; img.loading = "lazy";
+      if (item.focus) img.style.objectPosition = item.focus;
+      img.onerror = function () { t.replaceChildren(art("", item.placeholder)); };
+      t.appendChild(img);
+    } else t.appendChild(art("", item.placeholder));
+    return t;
+  }
+  C.groups.forEach(function (g) {
+    var sec = el("section", "group block"); sec.setAttribute("aria-labelledby", "g-" + g.id);
+    var head = el("div", "section-head"); var h2 = el("h2", null, g.title); h2.id = "g-" + g.id;
+    head.appendChild(h2); head.appendChild(el("span", null, g.items.length + (g.items.length === 1 ? " piece" : " pieces")));
+    sec.appendChild(head);
+    if (g.layout === "cards") {
+      var ol = el("ol", "works" + (g.items.length === 3 ? " three" : ""));
+      g.items.forEach(function (w, i) {
+        var muted = w.status && w.status !== "published";
+        var li = el("li", "work" + (muted ? " in-production" : ""));
+        li.appendChild(thumb(w));
+        var tx = el("div");
+        tx.appendChild(el("p", "num", String(i + 1).padStart(2, "0")));
+        tx.appendChild(el("h3", null, w.title));
+        if (w.what) tx.appendChild(el("p", "what", w.what));
+        if (w.desc) tx.appendChild(el("p", "impact", w.desc));
+        if (w.impact) tx.appendChild(el("p", "impact reported", w.impact));
+        if (muted) tx.appendChild(badge(w.status));
+        var lk = linksEl(w); if (lk) tx.appendChild(lk);
+        if (w.todo) tx.appendChild(el("p", "todo", w.todo));
+        li.appendChild(tx); ol.appendChild(li);
+      });
+      sec.appendChild(ol);
+    } else if (g.layout === "posts") {
+      var ul = el("ul", "posts");
+      g.items.forEach(function (p) {
+        var li = el("li", "post");
+        var top = el("div"); top.appendChild(el("p", "x", "X · @amina_io")); top.appendChild(el("h3", null, p.title));
+        li.appendChild(top);
+        var lk = linksEl(p); if (lk) li.appendChild(lk);
+        ul.appendChild(li);
+      });
+      sec.appendChild(ul);
+    } else {
+      var list = el("ul", "list");
+      g.items.forEach(function (w) {
+        var muted = w.status && w.status !== "published";
+        var li = el("li", "row" + (muted ? " muted" : ""));
+        var main = el("div", "row-main");
+        main.appendChild(el("h3", null, w.title));
+        if (w.what) main.appendChild(el("p", "what", w.what));
+        if (w.desc) main.appendChild(el("p", "impact", w.desc));
+        if (w.todo) main.appendChild(el("p", "todo", w.todo));
+        var side = el("div", "row-side");
+        var b = badge(w.status); if (b) side.appendChild(b);
+        var lk = linksEl(w); if (lk) side.appendChild(lk);
+        li.appendChild(main); li.appendChild(side); list.appendChild(li);
+      });
+      sec.appendChild(list);
+    }
+    root.appendChild(sec);
+  });
+})();
+</script>
+</body>
+</html>
