@@ -113,7 +113,11 @@
   .tl-pane.on { display: flex; animation: tlIn .5s cubic-bezier(.2,.7,.2,1); }
   @keyframes tlIn { from { opacity: 0; transform: translateY(10px); filter: blur(3px); } to { opacity: 1; transform: none; filter: none; } }
   @media (prefers-reduced-motion: reduce) { .tl-pane.on { animation: none; } }
-  @media (max-width: 620px) { .tl-track { overflow-x: auto; grid-template-columns: repeat(6, 104px); scrollbar-width: none; padding-top: 8px; } }
+  @media (max-width: 620px) {
+    .tl-track { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 22px; padding-top: 8px; }
+    .tl-node:nth-child(3n+1) .tl-axis::before { left: 50%; }
+    .tl-node:nth-child(3n) .tl-axis::before { right: 50%; }
+  }
   .era { display: grid; grid-template-columns: 132px 1fr; gap: 24px; align-items: baseline; }
   .era-y { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #C0447A; line-height: 2.6; }
   .era-b { display: flex; flex-direction: column; gap: 16px; }
@@ -123,7 +127,7 @@
   .plainlist li { display: grid; grid-template-columns: 14px 1fr; gap: 12px; }
   .plainlist .plus { color: #C0447A; }
   .plainlist .qual { color: #8A6455; }
-  @media (max-width: 620px) { .about-grid { grid-template-columns: 1fr; } .about-nav { border-right: none; border-bottom: 1px solid #F0DCE2; padding-right: 0; padding-bottom: 18px; } }
+  @media (max-width: 620px) { .about-grid { grid-template-columns: minmax(0, 1fr); } .about-nav { border-right: none; border-bottom: 1px solid #F0DCE2; padding-right: 0; padding-bottom: 18px; } }
   .tabpane.music { position: relative; gap: 22px; padding: clamp(22px, 4vw, 36px); border-radius: 22px; background: linear-gradient(135deg, #F7C6D8 0%, #EFB6D6 30%, #E3C2EE 55%, #F9D3D8 80%, #F4B5CB 100%); color: #3A2A22; overflow: hidden; isolation: isolate; border: 1px solid rgba(255,255,255,0.7); box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 -20px 40px -20px rgba(192,68,122,0.25), 0 20px 40px -24px rgba(142,42,90,0.45); }
   .tabpane.music::before { content: ''; position: absolute; inset: -20%; z-index: -1; background: conic-gradient(from 210deg at 70% 30%, rgba(255,255,255,0) 0deg, rgba(190,225,255,0.55) 60deg, rgba(255,255,255,0) 120deg, rgba(255,214,236,0.6) 200deg, rgba(214,200,255,0.5) 280deg, rgba(255,255,255,0) 360deg), radial-gradient(45% 35% at 20% 8%, rgba(255,255,255,0.75), transparent 70%), radial-gradient(40% 40% at 90% 95%, rgba(192,68,122,0.35), transparent 70%); filter: blur(18px); }
   .tabpane.music::after { content: ''; position: absolute; inset: 0; z-index: -1; opacity: .35; background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.35) 0 1px, transparent 1px 7px), radial-gradient(rgba(142,42,90,0.35) 0.6px, transparent 0.9px); background-size: auto, 5px 5px; pointer-events: none; }
@@ -165,7 +169,7 @@
   .m-title { font-size: 16px; }
   .m-note { font-size: 13px; color: #7A5A4E; margin-top: 4px; }
   @media (prefers-reduced-motion: reduce) { .about-body a.m-card, .m-art i { transition: none; } }
-  .back { margin-top: 60px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A6455; text-decoration: none; }
+  .back { display: inline-block; margin-top: 46px; padding: 14px 10px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A6455; text-decoration: none; }
 
   .list { width: 100%; max-width: 660px; display: flex; flex-direction: column; }
   .list-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 1px solid #4A3228; padding-bottom: 10px; }
@@ -185,9 +189,9 @@
   a:focus-visible, [role="tab"]:focus-visible { outline: 2px solid #C0447A; outline-offset: 3px; }
   .c-mail a { white-space: nowrap; color: #3A2A22; text-decoration: none; border-bottom: 2px solid #E8AEC0; }
   .c-mail a:hover { color: #C0447A; border-bottom-color: #C0447A; }
-  .socials { display: flex; gap: 26px; margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; }
-  .socials a { color: #8A6455; text-decoration: none; border-bottom: 1px solid #E8AEC0; }
-  .socials a:hover { color: #C0447A; border-bottom-color: #C0447A; }
+  .socials { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 18px; row-gap: 4px; margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; }
+  .socials a { display: inline-block; min-width: 44px; box-sizing: border-box; text-align: center; padding: 14px 6px; color: #8A6455; text-decoration: underline; text-decoration-color: #E8AEC0; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+  .socials a:hover { color: #C0447A; text-decoration-color: #C0447A; }
 
   @media (max-width: 520px) {
     .row { grid-template-columns: 44px 1fr; }
@@ -228,16 +232,16 @@
     <div class="about-body">
       <div class="tabpane on" data-pane="bio">
         <p>I'm Amina Green. I make videos about technology and society, and have a professional and academic background in computer science and social science.</p>
-        <p>I previously <a href="https://www.japantimes.co.jp/community/2017/02/19/our-lives/african-american-idol-aminyan-difference-double-edged-sword/" target="_blank" rel="noopener">worked as an idol in Japan</a> under the name <a href="https://www.tv-tokyo.co.jp/information/2016/12/19/196791.html" target="_blank" rel="noopener">aminyan</a> or Amina du Jean. Now I'm a <a href="https://www.youtube.com/@amina-io/videos" target="_blank" rel="noopener">video producer</a>, writer and technologist in San Francisco, and a <a href="https://www.framefellowship.com/" target="_blank" rel="noopener">Frame Fellow</a> making AI safety videos with <a href="https://www.matsprogram.org/" target="_blank" rel="noopener">Machine Alignment, Transparency, and Security (MATS)</a>.</p>
+        <p>I previously <a href="https://www.japantimes.co.jp/community/2017/02/19/our-lives/african-american-idol-aminyan-difference-double-edged-sword/" target="_blank" rel="noopener">worked as an idol in Japan</a> under the name <a href="https://www.tv-tokyo.co.jp/information/2016/12/19/196791.html" target="_blank" rel="noopener">aminyan</a> or Amina du Jean. Now I'm a <a href="https://www.youtube.com/@amina-io/videos" target="_blank" rel="noopener">video producer</a>, writer and technologist in San Francisco, and a <a href="https://www.framefellowship.com/" target="_blank" rel="noopener">Frame Fellow</a> making AI safety videos with <a href="https://www.matsprogram.org/" target="_blank" rel="noopener">MATS Research</a>.</p>
         <p>I also host events and salons in SF that bring people together!</p>
         <div class="tl">
           <div class="tl-track" role="tablist" aria-label="Timeline">
-            <button class="tl-node on" role="tab" aria-selected="true" aria-controls="era-0" id="tl-0"><span class="tl-fig"><img src="tl/fig-01.png" alt="Pixel illustration of a handheld game console" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#8A1E4C">FIG. 01</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2010 ~ 2014</span></button>
-            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-1" id="tl-1"><span class="tl-fig"><img src="tl/fig-02.png" alt="Pixel illustration of a microphone with sparkles" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#F2CFC8">FIG. 02</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2014 ~ 2017</span></button>
-            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-2" id="tl-2"><span class="tl-fig"><img src="tl/fig-03.png" alt="Pixel illustration of an open book" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#8A1E4C">FIG. 03</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2017 ~ 2020</span></button>
-            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-3" id="tl-3"><span class="tl-fig"><img src="tl/fig-04.png" alt="Pixel illustration of a laptop with a code prompt" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#D98AA4">FIG. 04</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2020 ~ 2023</span></button>
-            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-4" id="tl-4"><span class="tl-fig"><img src="tl/fig-05.png" alt="Pixel illustration of a heart with a pulse line" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#8A1E4C">FIG. 05</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2023 ~ 2025</span></button>
-            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-5" id="tl-5"><span class="tl-fig"><img src="tl/fig-06.png" alt="Pixel illustration of a film camera" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#FBE3E6">FIG. 06</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">Sept 2026 ~ Present</span></button>
+            <button class="tl-node on" role="tab" aria-selected="true" aria-controls="era-0" id="tl-0" aria-label="2010–2014"><span class="tl-fig"><img src="tl/fig-01.png" alt="Pixel illustration of a handheld game console" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#8A1E4C">FIG. 01</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2010 ~ 2014</span></button>
+            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-1" id="tl-1" aria-label="2014–2017"><span class="tl-fig"><img src="tl/fig-02.png" alt="Pixel illustration of a microphone with sparkles" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#F2CFC8">FIG. 02</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2014 ~ 2017</span></button>
+            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-2" id="tl-2" aria-label="2017–2020"><span class="tl-fig"><img src="tl/fig-03.png" alt="Pixel illustration of an open book" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#8A1E4C">FIG. 03</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2017 ~ 2020</span></button>
+            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-3" id="tl-3" aria-label="2020–2023"><span class="tl-fig"><img src="tl/fig-04.png" alt="Pixel illustration of a laptop with a code prompt" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#D98AA4">FIG. 04</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2020 ~ 2023</span></button>
+            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-4" id="tl-4" aria-label="2023–2025"><span class="tl-fig"><img src="tl/fig-05.png" alt="Pixel illustration of a heart with a pulse line" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#8A1E4C">FIG. 05</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2023 ~ 2025</span></button>
+            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-5" id="tl-5" aria-label="September 2026–present"><span class="tl-fig"><img src="tl/fig-06.png" alt="Pixel illustration of a film camera" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#FBE3E6">FIG. 06</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">Sept 2026 ~ Present</span></button>
           </div>
           <div class="tl-pane on" role="tabpanel" id="era-0" aria-labelledby="tl-0">
             <p>I started private Japanese lessons at eleven, in my small Michigan town, and streaming on Nico Nico Douga not long after.</p>
