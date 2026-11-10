@@ -32,6 +32,8 @@
 <style>
 :root{--ink:#2b2a2e;--cream:#fffdf8;--muted:#6a6b62;--accent:#a3245f;--note:#f2d64b;--ease-glide:cubic-bezier(.65,0,.2,1);--ease-rise:cubic-bezier(.2,.7,.2,1)}
 *{box-sizing:border-box}
+/* fluid root: 16px on phones, ~18px at 1440px, 22px from ~2180px up. Everything below is in rem so it scales with it. */
+html{font-size:clamp(16px,0.55vw + 10px,22px)}
 html,body{margin:0;height:100%}
 body{background:#cfd3c4;font-family:'Zen Old Mincho',serif;color:var(--cream);overflow:hidden;-webkit-font-smoothing:antialiased}
 a{color:var(--ink)}a:hover{color:#6b4a63}
@@ -48,19 +50,19 @@ body[data-page="about"] .bg .about{opacity:1}
 /* nav */
 @keyframes navIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.nav-btn{background:none;border:0;padding:10px 4px;min-height:44px;cursor:pointer;font-size:15px;letter-spacing:-.02em;color:var(--cream);text-shadow:0 1px 10px rgba(40,30,45,.45);transition:opacity 200ms ease}
+.nav-btn{background:none;border:0;padding:.625rem .25rem;min-height:44px;cursor:pointer;font-size:.9375rem;letter-spacing:-.02em;color:var(--cream);text-shadow:0 1px 10px rgba(40,30,45,.45);transition:opacity 200ms ease}
 .nav-btn:hover{opacity:.7}
 .nav-in{animation:navIn 600ms var(--ease-rise) backwards}
-header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px clamp(20px,4vw,56px)}
-.wordmark{font-family:'Instrument Serif',serif;font-size:22px;letter-spacing:0}
-.top-links{display:flex;align-items:center;gap:clamp(14px,2.4vw,28px);padding:2px 26px;border-radius:999px;background:rgba(43,38,48,.28);border:1px solid rgba(255,253,248,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:opacity 500ms ease,visibility 500ms}
-.top-links .nav-btn{font-size:18px;font-weight:500;text-shadow:0 1px 12px rgba(40,30,45,.6)}
+header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.875rem clamp(20px,4vw,72px)}
+.wordmark{font-family:'Instrument Serif',serif;font-size:1.6rem;letter-spacing:0}
+.top-links{display:flex;align-items:center;gap:clamp(.875rem,2.4vw,1.75rem);padding:.125rem 1.625rem;border-radius:999px;background:rgba(43,38,48,.28);border:1px solid rgba(255,253,248,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:opacity 500ms ease,visibility 500ms}
+.top-links .nav-btn{font-size:1.25rem;font-weight:500;text-shadow:0 1px 12px rgba(40,30,45,.6)}
 .top-links .nav-btn[aria-current="page"]{border-bottom:1px solid rgba(255,253,248,.9)}
-.sep{color:rgba(255,253,248,.8);font-size:16px}
+.sep{color:rgba(255,253,248,.8);font-size:1.1rem}
 .menu-toggle{display:none}
 /* off home, give the wordmark and menu button the same frosted pill as the menu so they stay legible over white cards */
-.wordmark,.menu-toggle{padding:2px 16px;margin-left:-16px;border-radius:999px;border:1px solid transparent;transition:opacity 200ms ease,background-color 500ms ease,border-color 500ms ease}
-.menu-toggle{margin:0 -4px 0 0}
+.wordmark,.menu-toggle{padding:.125rem 1rem;margin-left:-1rem;border-radius:999px;border:1px solid transparent;transition:opacity 200ms ease,background-color 500ms ease,border-color 500ms ease}
+.menu-toggle{margin:0 -.25rem 0 0}
 body:not([data-page="home"]) .wordmark,.menu-toggle{background-color:rgba(43,38,48,.28);border-color:rgba(255,253,248,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 body[data-page="about"] .top-links,body[data-page="about"] .wordmark,body[data-page="about"] .menu-toggle,body[data-page="about"] .top-links.open{background-color:rgba(43,38,48,.58)}
 body[data-page="home"] .top-links,body[data-page="home"] .menu-toggle{visibility:hidden;opacity:0;pointer-events:none}
@@ -68,70 +70,90 @@ body[data-page="home"] .top-links,body[data-page="home"] .menu-toggle{visibility
 /* track */
 .viewport{position:fixed;inset:0;overflow:hidden}
 .track{display:flex;width:100%;height:100%;transform:translateX(var(--track-shift,0%));transition:transform 900ms var(--ease-glide);will-change:transform}
-.panel{flex:0 0 100%;height:100%;overflow-y:auto;padding:96px 20px 48px;scrollbar-width:thin}
+.panel{flex:0 0 100%;height:100%;overflow-y:auto;padding:6.5rem 1.25rem 3rem;scrollbar-width:thin}
 .panel.center{display:flex;align-items:center;justify-content:center}
 .card{opacity:0;transform:translateY(28px);transition:opacity 600ms ease,transform 800ms var(--ease-rise);will-change:transform,opacity}
 .panel.on .card{opacity:1;transform:none;transition-delay:280ms}
 
 /* home */
-.hero-name{margin:0;font-family:'Jacquard 24',serif;font-weight:400;font-size:clamp(68px,12vw,176px);line-height:.86;color:var(--cream);text-shadow:0 2px 24px rgba(40,30,45,.28)}
-.hero-line{margin:22px auto 0;max-width:460px;font-size:16px;line-height:1.32;letter-spacing:-.035em;font-weight:500;text-shadow:0 1px 10px rgba(40,30,45,.5)}
-.hero-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 18px;margin-top:30px}
-.hero-nav .nav-btn{font-size:19px;font-weight:500;padding:10px 8px;text-shadow:0 1px 12px rgba(40,30,45,.6)}
-.hero-nav .nav-btn:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
-.status{margin:28px 0 0;display:flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.01em;text-shadow:0 1px 8px rgba(40,30,45,.5)}
-.dot{width:7px;height:7px;border-radius:50%;background:#d8f5c8;box-shadow:0 0 8px #d8f5c8;animation:pulse 2.4s ease-in-out infinite}
+.home-card{text-align:center;width:min(100%,100rem);display:flex;flex-direction:column;align-items:center}
+.hero-name{margin:0;font-family:'Jacquard 24',serif;font-weight:400;font-size:clamp(88px,15vw,280px);line-height:.86;color:var(--cream);text-shadow:0 2px 24px rgba(40,30,45,.28)}
+.hero-line{margin:1.5rem auto 0;max-width:34rem;font-size:1.35rem;line-height:1.32;letter-spacing:-.035em;font-weight:500;text-shadow:0 1px 10px rgba(40,30,45,.5)}
+.hero-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.375rem 1.25rem;margin-top:2.25rem}
+.hero-nav .nav-btn{font-size:1.6rem;font-weight:500;padding:.625rem .5rem;text-shadow:0 1px 12px rgba(40,30,45,.6)}
+.hero-nav .sep{font-size:1.3rem}
+.hero-nav .nav-btn:hover{opacity:1;text-decoration:underline;text-underline-offset:.4em}
+.status{margin:2rem 0 0;display:flex;align-items:center;gap:.5rem;font-size:.95rem;letter-spacing:.01em;text-shadow:0 1px 8px rgba(40,30,45,.5)}
+.dot{width:.45rem;height:.45rem;border-radius:50%;background:#d8f5c8;box-shadow:0 0 8px #d8f5c8;animation:pulse 2.4s ease-in-out infinite}
 
 /* content cards */
-.sheet{margin:0 auto;color:var(--ink);padding:clamp(24px,4vw,52px)}
-.sheet.frost{background:rgba(250,248,244,.84)}
-.sheet.white{background:#fff;border-radius:28px;padding:clamp(20px,3.5vw,40px);box-shadow:0 20px 60px rgba(40,45,30,.16)}
-.sheet.raised{background:rgba(250,248,244,.92);border-radius:28px;box-shadow:0 2px 6px rgba(40,30,45,.06),0 24px 60px rgba(40,30,45,.2)}
-.h{font-family:'Jacquard 24',serif;font-weight:400;line-height:.9;margin:0}
+.sheet{margin:0 auto;color:var(--ink);padding:clamp(1.5rem,4vw,3.5rem)}
+.sheet.frost{background:rgba(250,248,244,.84);width:min(100%,62rem)}
+.sheet.white{background:#fff;border-radius:1.75rem;padding:clamp(1.25rem,3.5vw,2.75rem);box-shadow:0 20px 60px rgba(40,45,30,.16);width:min(100%,70rem)}
+.sheet.raised{background:rgba(250,248,244,.92);border-radius:1.75rem;box-shadow:0 2px 6px rgba(40,30,45,.06),0 24px 60px rgba(40,30,45,.2);width:min(100%,52rem);display:flex;flex-direction:column;gap:.875rem}
+.h{font-family:'Jacquard 24',serif;font-weight:400;line-height:.9;margin:0;font-size:clamp(56px,7vw,120px)}
 .serif{font-family:'Instrument Serif',serif}
-.lede{margin:0 0 24px;font-size:15px;line-height:1.5;letter-spacing:-.02em}
-.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:8px 24px;border-top:1px solid rgba(43,42,46,.22);padding:16px 0}
-.role{font-family:'Instrument Serif',serif;font-size:22px;line-height:1.1}
-.meta{font-size:12px;margin-top:4px}
-.body{font-size:14px;line-height:1.55;letter-spacing:-.02em}
-.body ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.project{background:#fff;border-radius:16px;padding:10px 10px 14px;box-shadow:0 6px 20px rgba(40,30,45,.07);display:flex;flex-direction:column;gap:6px}
-.project img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:10px}
-.project .t{font-family:'Instrument Serif',serif;font-size:19px;line-height:1.1;margin-top:4px}
-.project .k{font-size:11px;color:var(--accent)}
-.project p{margin:0;font-size:12.5px;line-height:1.45;letter-spacing:-.02em}
-.project .result{padding-left:8px;border-left:2px solid var(--note)}
-.project .links{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;margin-top:2px}
-.eyebrow{margin-top:18px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.upcoming{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:8px}
-.upcoming>div{display:flex;gap:10px;align-items:center;font-size:12.5px;line-height:1.3}
-.upcoming img{width:64px;height:44px;flex:none;object-fit:cover;border-radius:8px;filter:grayscale(1)}
+.title{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.375rem}
+.lede{margin:0 0 1.5rem;font-size:.9375rem;line-height:1.5;letter-spacing:-.02em}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:.5rem 1.5rem;border-top:1px solid rgba(43,42,46,.22);padding:1rem 0}
+.role{font-family:'Instrument Serif',serif;font-size:1.375rem;line-height:1.1}
+.meta{font-size:.75rem;margin-top:.25rem}
+.body{font-size:.875rem;line-height:1.55;letter-spacing:-.02em}
+.body ul{margin:0;padding-left:1.125rem;display:flex;flex-direction:column;gap:.25rem}
+.frame{border-top:1px solid rgba(43,42,46,.22);padding:1rem 0 1.25rem}
+.frame-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.25rem 1rem}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(12.5rem,1fr));gap:.875rem}
+.project{background:#fff;border-radius:1rem;padding:.625rem .625rem .875rem;box-shadow:0 6px 20px rgba(40,30,45,.07);display:flex;flex-direction:column;gap:.375rem}
+.project img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:.625rem}
+.project .t{font-family:'Instrument Serif',serif;font-size:1.1875rem;line-height:1.1;margin-top:.25rem}
+.project .k{font-size:.6875rem;color:var(--accent)}
+.project p{margin:0;font-size:.78125rem;line-height:1.45;letter-spacing:-.02em}
+.project .result{padding-left:.5rem;border-left:2px solid var(--note)}
+.project .links{display:flex;flex-wrap:wrap;gap:.25rem .75rem;font-size:.78125rem;margin-top:.125rem}
+.eyebrow{margin-top:1.125rem;font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.upcoming{display:grid;grid-template-columns:repeat(auto-fit,minmax(11.875rem,1fr));gap:.625rem;margin-top:.5rem}
+.upcoming>div{display:flex;gap:.625rem;align-items:center;font-size:.78125rem;line-height:1.3}
+.upcoming img{width:4rem;height:2.75rem;flex:none;object-fit:cover;border-radius:.5rem;filter:grayscale(1)}
 .upcoming span{color:var(--muted)}
-.pill{min-height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);font-size:14px;letter-spacing:-.02em;cursor:pointer;transition:transform 200ms ease}
-.pill.dark{background:var(--ink);color:#fff;border:0;min-height:46px}
+.pill{min-height:max(44px,2.75rem);padding:0 1.25rem;border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);font-size:.875rem;letter-spacing:-.02em;cursor:pointer;transition:transform 200ms ease}
+.pill.dark{background:var(--ink);color:#fff;border:0}
+.pill.tall{min-height:max(46px,2.875rem)}
 .pill:hover{transform:translateY(-1px)}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
 
 /* about */
-.about-photo{display:block;width:100%;height:auto;max-width:620px;margin:0 auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%;border-radius:18px}
-.column{max-width:540px;margin:0 auto}
-.column p{margin:0 0 12px;font-size:15px;line-height:1.5;letter-spacing:-.035em}
-.list{font-size:14px;line-height:1.42;letter-spacing:-.035em}
-.li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px;padding:14px 0;border-top:1px solid rgba(43,42,46,.14)}
-.li .yr{font-size:12px;color:var(--muted)}
+.about-photo{display:block;width:100%;height:auto;max-width:40rem;margin:0 auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%;border-radius:1.125rem}
+.column{max-width:40rem;margin:0 auto}
+.column p{margin:0 0 .75rem;font-size:.9375rem;line-height:1.5;letter-spacing:-.035em}
+.list{font-size:.875rem;line-height:1.42;letter-spacing:-.035em}
+.li{display:grid;grid-template-columns:4.5rem minmax(0,1fr);gap:.875rem;padding:.875rem 0;border-top:1px solid rgba(43,42,46,.14)}
+.li .yr{font-size:.75rem;color:var(--muted)}
 .li b{font-weight:600}
 
 /* contact */
-.email{font-family:'Instrument Serif',serif;font-size:clamp(26px,4.4vw,38px);line-height:1.1;word-break:break-all}
+.email{font-family:'Instrument Serif',serif;font-size:clamp(1.625rem,4.4vw,3rem);line-height:1.1;word-break:break-all;text-decoration:none}
+.email-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem;margin-top:.375rem}
+.socials{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:.5rem;font-size:.9375rem}
 
 @media (max-width:720px){
+  /* phones keep the sizes from the previous version */
+  .wordmark{font-size:1.375rem}
+  .hero-name{font-size:clamp(68px,16vw,104px)}
+  .hero-line{font-size:1rem;max-width:28.75rem;margin-top:1.375rem}
+  .hero-nav{gap:.375rem 1.125rem;margin-top:1.875rem}
+  .hero-nav .nav-btn{font-size:1.1875rem}
+  .hero-nav .sep{font-size:1rem}
+  .status{font-size:.75rem;margin-top:1.75rem}
+  .dot{width:7px;height:7px}
+  .panel{padding-top:6rem}
+  .h{font-size:3rem}
   .top-links{display:none}
-  .top-links.open{display:flex;flex-direction:column;gap:2px;position:absolute;top:70px;right:16px;padding:12px 20px;border-radius:18px;background:rgba(43,42,46,.55)}
+  .top-links .nav-btn{font-size:1.125rem}
+  .top-links.open{display:flex;flex-direction:column;gap:.125rem;position:absolute;top:4.375rem;right:1rem;padding:.75rem 1.25rem;border-radius:1.125rem;background:rgba(43,42,46,.55)}
   .top-links .sep{display:none}
   .menu-toggle{display:inline-block}
   .row{grid-template-columns:minmax(0,1fr)}
-  .li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .li{grid-template-columns:minmax(0,1fr);gap:.125rem}
 }
 @media (prefers-reduced-motion:reduce){*{animation-duration:1ms!important;transition-duration:1ms!important}}
 </style>
@@ -161,7 +183,7 @@ body[data-page="home"] .top-links,body[data-page="home"] .menu-toggle{visibility
 
     <!-- 0 HOME -->
     <section class="panel center on" data-panel="home" aria-label="Home">
-      <div class="card" style="text-align:center;width:min(100%,980px);display:flex;flex-direction:column;align-items:center">
+      <div class="card home-card">
         <h1 class="hero-name">Amina Green</h1>
         <p class="hero-line">creator, researcher &amp; writer, curious about<br>our relationship to machines</p>
         <nav class="hero-nav" aria-label="Home menu">
@@ -177,13 +199,13 @@ body[data-page="home"] .top-links,body[data-page="home"] .menu-toggle{visibility
 
     <!-- 1 WORK -->
     <section class="panel" data-panel="work" aria-label="Work">
-      <div class="card sheet frost" style="width:min(100%,760px)">
-        <h2 class="h" style="margin-bottom:12px;font-size:clamp(48px,7vw,72px)">Work</h2>
+      <div class="card sheet frost">
+        <h2 class="h" style="margin-bottom:.75rem">Work</h2>
         <p class="lede">Research, data and media, mostly about people and the machines they live with.</p>
 
-        <div style="border-top:1px solid rgba(43,42,46,.22);padding:16px 0 20px">
-          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px"><div class="role">Frame Fellowship</div><div class="meta" style="margin:0">AI-focused media accelerator · 2026</div></div>
-          <p class="body" style="margin:8px 0 16px">Making video essays, interviews and campaigns on AI safety and governance.</p>
+        <div class="frame">
+          <div class="frame-head"><div class="role">Frame Fellowship</div><div class="meta" style="margin:0">AI-focused media accelerator · 2026</div></div>
+          <p class="body" style="margin:.5rem 0 1rem">Making video essays, interviews and campaigns on AI safety and governance.</p>
           <div class="projects">
             <article class="project">
               <img src="img/home-mats-residency.jpg" width="346" height="214" alt="Ryan Kidd in the MATS Residency campaign interview">
@@ -217,7 +239,7 @@ body[data-page="home"] .top-links,body[data-page="home"] .menu-toggle{visibility
 
         <div class="row">
           <div><div class="role">Head of Data &amp; Growth</div><div class="meta">MintStars · 2022–2025</div></div>
-          <div class="body"><p style="margin:0 0 8px">Led data strategy and growth for a venture-backed creator-economy platform.</p><ul><li>Grew the platform from 15,000 to 100,000 monthly users and reached $1M ARR within a year.</li><li>Built embedding-based ML models for content classification and discovery.</li><li>Automated Python outreach pipelines that increased user engagement.</li><li>Ran mixed-methods research behind 4 major feature launches.</li><li>Set up the company's data infrastructure and documentation.</li></ul></div>
+          <div class="body"><p style="margin:0 0 .5rem">Led data strategy and growth for a venture-backed creator-economy platform.</p><ul><li>Grew the platform from 15,000 to 100,000 monthly users and reached $1M ARR within a year.</li><li>Built embedding-based ML models for content classification and discovery.</li><li>Automated Python outreach pipelines that increased user engagement.</li><li>Ran mixed-methods research behind 4 major feature launches.</li><li>Set up the company's data infrastructure and documentation.</li></ul></div>
         </div>
         <div class="row">
           <div><div class="role">Research &amp; Growth</div><div class="meta">Plurality Institute · 2023–2026</div></div>
@@ -236,14 +258,14 @@ body[data-page="home"] .top-links,body[data-page="home"] .menu-toggle{visibility
 
     <!-- 2 ABOUT -->
     <section class="panel" data-panel="about" aria-label="About">
-      <article class="card sheet white" style="width:min(100%,880px)">
+      <article class="card sheet white">
         <img class="about-photo" src="img/amina-speaking.jpg" width="560" height="700" alt="Amina speaking at a cybernetics reading group event">
         <div class="column">
-          <h2 class="h" style="margin-top:32px;font-size:clamp(52px,8vw,80px)">About</h2>
-          <p style="margin-top:16px">Hi, I'm Amina. I'm from Michigan, and I spent a few years in Japan as a <a href="https://bimbollectual.com/p/how-i-became-a-j-pop-idol" style="text-underline-offset:3px">J-pop idol</a>.</p>
+          <h2 class="h" style="margin-top:2rem">About</h2>
+          <p style="margin-top:1rem">Hi, I'm Amina. I'm from Michigan, and I spent a few years in Japan as a <a href="https://bimbollectual.com/p/how-i-became-a-j-pop-idol" style="text-underline-offset:3px">J-pop idol</a>.</p>
           <p>After that I worked in tech, running data and growth at startups.</p>
           <p>Now I'm back in media, making videos and writing.</p>
-          <p style="margin-bottom:6px">A few highlights:</p>
+          <p style="margin-bottom:.375rem">A few highlights:</p>
           <div class="list">
             <div class="li"><span class="yr">2026</span><span><b>Frame Fellow</b>, Cohort 2.0 — a fellowship for AI-focused creators, making media about AI safety.</span></div>
             <div class="li"><span class="yr">2023–26</span><span><b>Research &amp; Growth</b> at Plurality Institute.</span></div>
@@ -257,9 +279,9 @@ body[data-page="home"] .top-links,body[data-page="home"] .menu-toggle{visibility
             <div class="li"><span class="yr">2016</span><span><b>Judges' runner-up award</b>, Kodansha's Miss iD 2016.</span></div>
             <div class="li"><span class="yr">2015</span><span><b>Twitch stream host</b>, Tokyo Game Show with Bandai Namco.</span></div>
           </div>
-          <div class="actions" style="margin-top:26px">
-            <button class="pill dark" data-go="work">check out my work →</button>
-            <button class="pill" data-go="contact" style="min-height:46px">work with me</button>
+          <div class="actions" style="margin-top:1.625rem">
+            <button class="pill dark tall" data-go="work">check out my work →</button>
+            <button class="pill tall" data-go="contact">work with me</button>
           </div>
         </div>
       </article>
@@ -267,25 +289,25 @@ body[data-page="home"] .top-links,body[data-page="home"] .menu-toggle{visibility
 
     <!-- 3 WRITING & VIDEO (reached from the Work page) -->
     <section class="panel" data-panel="writing" aria-label="Writing and video">
-      <div class="card sheet frost" style="width:min(100%,760px)">
-        <h2 class="h" style="margin-bottom:24px;font-size:clamp(44px,6.5vw,68px)">Writing &amp; video</h2>
+      <div class="card sheet frost">
+        <h2 class="h" style="margin-bottom:1.5rem">Writing &amp; video</h2>
         <!-- Featured essay row: hidden until Amina sends the title, publication and year. -->
-        <div class="row"><div class="serif" style="font-style:italic;font-size:22px">Feeling Machines</div><p class="body" style="margin:0">Newsletter on affective computing. <a href="https://feelingmachines.substack.com/">feelingmachines.substack.com</a></p></div>
-        <div class="row"><div class="serif" style="font-style:italic;font-size:22px">Bimbollectual</div><p class="body" style="margin:0">Newsletter on sociology, philosophy and internet culture. <a href="https://bimbollectual.com/">bimbollectual.com</a></p></div>
-        <div class="row"><div class="serif" style="font-style:italic;font-size:22px">Video</div><p class="body" style="margin:0">Interviews and short essays on AI and the people building it. <a href="https://www.youtube.com/@amina-io">youtube.com/@amina-io</a></p></div>
+        <div class="row"><div class="title">Feeling Machines</div><p class="body" style="margin:0">Newsletter on affective computing. <a href="https://feelingmachines.substack.com/">feelingmachines.substack.com</a></p></div>
+        <div class="row"><div class="title">Bimbollectual</div><p class="body" style="margin:0">Newsletter on sociology, philosophy and internet culture. <a href="https://bimbollectual.com/">bimbollectual.com</a></p></div>
+        <div class="row"><div class="title">Video</div><p class="body" style="margin:0">Interviews and short essays on AI and the people building it. <a href="https://www.youtube.com/@amina-io">youtube.com/@amina-io</a></p></div>
       </div>
     </section>
 
     <!-- 4 CONTACT -->
     <section class="panel center" data-panel="contact" aria-label="Contact">
-      <div class="card sheet raised" style="width:min(100%,680px);display:flex;flex-direction:column;gap:14px">
-        <h2 class="h" style="font-size:clamp(48px,7vw,72px)">Work with me</h2>
+      <div class="card sheet raised">
+        <h2 class="h">Work with me</h2>
         <p class="lede" style="margin:0">Open to roles, research collaborations and speaking. The fastest way to reach me is email.</p>
-        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:6px">
-          <a class="email" href="mailto:hello@amina-io.com" style="text-decoration:none">hello@amina-io.com</a>
-          <button class="pill copy-email" style="font-size:13px">copy email</button>
+        <div class="email-row">
+          <a class="email" href="mailto:hello@amina-io.com">hello@amina-io.com</a>
+          <button class="pill copy-email" style="font-size:.8125rem">copy email</button>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:8px;font-size:15px">
+        <div class="socials">
           <a href="https://x.com/amina_io">X — @amina_io</a>
           <a href="https://instagram.com/bimbollectual">Instagram — @bimbollectual</a>
           <a href="https://www.youtube.com/@amina-io">YouTube — @amina-io</a>
