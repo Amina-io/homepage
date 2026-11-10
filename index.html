@@ -1,418 +1,357 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Amina Green — Videos about technology and society</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Amina Green makes videos about technology and society, with a background in computer science and social science. Selected video, essays and talks.">
+<title>Amina Green</title>
+<meta name="description" content="Amina Green — creator, researcher &amp; writer, curious about our relationship to machines. Former J-pop idol, data &amp; growth lead, now making AI safety media.">
 <meta name="author" content="Amina Green">
-<meta name="theme-color" content="#E6DDF2">
+<meta name="theme-color" content="#cfd3c4">
 <link rel="canonical" href="https://amina-io.com/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Amina Green">
-<meta property="og:title" content="Amina Green — Videos about technology and society">
-<meta property="og:description" content="Video producer and writer working on AI, technology and society.">
+<meta property="og:title" content="Amina Green">
+<meta property="og:description" content="Creator, researcher &amp; writer, curious about our relationship to machines.">
 <meta property="og:url" content="https://amina-io.com/">
 <meta property="profile:first_name" content="Amina">
 <meta property="profile:last_name" content="Green">
-<meta property="og:image" content="https://amina-io.com/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Seedling emoji on a lilac-to-peach gradient">
+<meta property="og:image" content="https://amina-io.com/img/amina-speaking.jpg">
+<meta property="og:image:width" content="560">
+<meta property="og:image:height" content="700">
+<meta property="og:image:alt" content="Amina Green speaking at a cybernetics reading group event">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://amina-io.com/og.png">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
-<link rel="apple-touch-icon" href="favicon.png">
 <meta name="twitter:site" content="@amina_io">
 <meta name="twitter:creator" content="@amina_io">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Amina Green","alternateName":["Amina C. Green","aminyan","Amina du Jean"],"url":"https://amina-io.com/","jobTitle":"Video producer","description":"Amina Green makes videos about technology and society, with a professional and academic background in computer science and social science.","email":"mailto:hello@amina-io.com","address":{"@type":"PostalAddress","addressLocality":"San Francisco","addressRegion":"CA"},"knowsAbout":["AI safety","Video production","Explainer videos","Human-computer interaction","Technology and society"],"affiliation":{"@type":"Organization","name":"MATS","url":"https://www.matsprogram.org/"},"sameAs":["https://www.linkedin.com/in/aminag/","https://www.youtube.com/@amina-io","https://x.com/amina_io","https://substack.com/@aminaio","https://bimbollectual.com","https://instagram.com/bimbollectual","https://github.com/Amina-io"]}</script>
+<meta name="twitter:image" content="https://amina-io.com/img/amina-speaking.jpg">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Amina Green","url":"https://amina-io.com","image":"https://amina-io.com/img/amina-speaking.jpg","jobTitle":"Researcher, writer and creator","description":"Amina Green is a creator, researcher and writer, curious about our relationship to machines.","email":"mailto:hello@amina-io.com","address":{"@type":"PostalAddress","addressLocality":"San Francisco","addressRegion":"CA"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"University of California, Santa Cruz"},{"@type":"CollegeOrUniversity","name":"University of East London"}],"knowsAbout":["AI safety","AI governance","Video production","Human-computer interaction","Affective computing","Technology and society"],"sameAs":["https://x.com/amina_io","https://instagram.com/bimbollectual","https://www.youtube.com/@amina-io","https://bimbollectual.com","https://www.linkedin.com/in/aminag/","https://substack.com/@aminaio","https://github.com/Amina-io"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23F2D3D8'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-size='34' fill='%234A3228'%3E%E2%80%A2%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacquard+24&family=Instrument+Serif:ital@0;1&family=Zen+Old+Mincho:wght@400;500;600&display=swap">
 <style>
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; background: #F2D3D8; }
-  body, body * { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='38' viewBox='0 0 12 19' shape-rendering='crispEdges'%3E%3Cpath d='M0 0h1v1H0zM0 1h2v1H0zM0 2h3v1H0zM0 3h4v1H0zM0 4h5v1H0zM0 5h6v1H0zM0 6h7v1H0zM0 7h8v1H0zM0 8h9v1H0zM0 9h10v1H0zM0 10h11v1H0zM0 11h6v1H0zM0 12h4v1H0zM4 12h1v1H4zM0 13h3v1H0zM5 13h2v1H5zM0 14h2v1H0zM6 14h2v1H6zM0 15h1v1H0zM7 15h2v1H7zM8 16h2v1H8z' fill='%234A3228'/%3E%3Cpath d='M1 1h1v1H1zM1 2h2v1H1zM1 3h3v1H1zM1 4h4v1H1zM1 5h5v1H1zM1 6h6v1H1zM1 7h7v1H1zM1 8h8v1H1zM1 9h9v1H1zM1 10h8v1H1zM1 11h4v1H1zM1 12h3v1H1zM1 13h1v1H1z' fill='%23FBDDE8'/%3E%3C/svg%3E") 0 0, auto; }
-  a, .mark, .menu a, .back { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 17 17' shape-rendering='crispEdges'%3E%3Cpath d='M5 0h3v1H5zM4 1h1v1H4zM8 1h1v1H8zM4 2h1v1H4zM8 2h1v1H8zM4 3h1v1H4zM8 3h1v1H8zM4 4h1v1H4zM8 4h1v1H8zM4 5h1v1H4zM8 5h4v1H8zM4 6h1v1H4zM11 6h1v1H11zM12 6h2v1H12zM2 7h2v1H2zM13 7h1v1H13zM14 7h1v1H14zM1 8h1v1H1zM15 8h1v1H15zM1 9h1v1H1zM15 9h1v1H15zM1 10h1v1H1zM15 10h1v1H15zM2 11h1v1H2zM14 11h1v1H14zM2 12h1v1H2zM14 12h1v1H14zM3 13h1v1H3zM13 13h1v1H13zM4 14h1v1H4zM12 14h1v1H12zM5 15h7v1H5z' fill='%234A3228'/%3E%3Cpath d='M5 1h3v1H5zM5 2h3v1H5zM5 3h3v1H5zM5 4h3v1H5zM5 5h3v1H5zM5 6h6v1H5zM4 7h9v1H4zM2 8h13v1H2zM2 9h13v1H2zM2 10h13v1H2zM3 11h11v1H3zM3 12h11v1H3zM4 13h9v1H4zM5 14h7v1H5z' fill='%23FBDDE8'/%3E%3C/svg%3E") 8 2, pointer; }
-  body { -webkit-font-smoothing: antialiased; }
-  .mark a { color: inherit; text-decoration: none; }
-  h2.h1 { margin: 0; font-weight: 400; text-align: center; }
-  .list { gap: 44px; }
-  .grp { display: flex; flex-direction: column; }
-  .grp-h { margin: 0; padding-bottom: 10px; border-bottom: 1px solid #4A3228; font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #C0447A; }
-  a { color: #3A2A22; }
-  a:hover { color: #C0447A; }
-  @keyframes bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
-  @keyframes shimmer { 0% { background-position: 0% 50% } 100% { background-position: 200% 50% } }
-  @keyframes fadeup { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+:root{--ink:#2b2a2e;--cream:#fffdf8;--muted:#6a6b62;--accent:#a3245f;--note:#f2d64b;--ease-glide:cubic-bezier(.65,0,.2,1);--ease-rise:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:#cfd3c4;font-family:'Zen Old Mincho',serif;color:var(--cream);overflow:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--ink)}a:hover{color:#6b4a63}
+button{font-family:inherit}
 
-  .tex, .fib, .vig { position: fixed; inset: 0; pointer-events: none; z-index: 1; }
-  .tex { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E"); mix-blend-mode: multiply; opacity: 0.8; }
-  .fib { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.008 0.09' numOctaves='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23f)' opacity='0.45'/%3E%3C/svg%3E"); mix-blend-mode: multiply; opacity: 0.5; }
-  .pulp, .speck { position: fixed; inset: 0; pointer-events: none; z-index: 1; mix-blend-mode: multiply; }
-  .pulp { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.016' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='500' height='500' filter='url(%23p)' opacity='0.3'/%3E%3C/svg%3E"); background-size: 500px 500px; opacity: 0.55; }
-  .speck { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.42' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23s)' opacity='0.22'/%3E%3C/svg%3E"); background-size: 220px 220px; opacity: 0.35; }
-  .vig { background: radial-gradient(120% 90% at 50% 40%, rgba(255,255,255,0.35), rgba(150,90,80,0.16) 100%); }
+/* backgrounds */
+.bg{position:fixed;inset:-6%;transform:translateX(var(--bg-shift,0%)) scale(1.12);transition:transform 1000ms var(--ease-glide)}
+.bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bg .hero{filter:blur(16px) saturate(1.05)}
+.bg .about{filter:blur(10px);opacity:0;transition:opacity 900ms ease}
+body[data-page="about"] .bg .about{opacity:1}
+.vignette{position:fixed;inset:0;background:radial-gradient(ellipse at center,rgba(60,45,70,.08),rgba(60,45,70,.26));pointer-events:none}
 
-  .banner { position: fixed; top: 0; left: 0; right: 0; z-index: 20; height: 40px; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 0 16px; background: linear-gradient(100deg, #FFFFFF 0%, #E3D4F5 14%, #CFE6F7 30%, #D6F2E6 46%, #FBF4D8 62%, #FBDDE8 78%, #FFFFFF 92%, #E3D4F5 100%); background-size: 200% 100%; animation: shimmer 9s linear infinite; text-decoration: none; font-family: 'Zen Old Mincho', serif; font-size: clamp(11px, 1.5vw, 14px); letter-spacing: 0.08em; color: #4A3228; text-align: center; box-sizing: border-box; }
-  .banner:hover { color: #C0447A; }
-  .banner span:first-child, .banner span:last-child { color: #C0447A; }
-  .mark { margin: 0; font-weight: 400; position: absolute; top: 22px; left: clamp(20px, 4vw, 44px); z-index: 10; cursor: pointer; font-family: 'Zen Old Mincho', serif; font-size: clamp(19px, 2.4vw, 24px); letter-spacing: 0.06em; transform: scaleX(0.88); transform-origin: left; color: #4A3228; text-decoration: none; }
+/* nav */
+@keyframes navIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.nav-btn{background:none;border:0;padding:10px 4px;min-height:44px;cursor:pointer;font-size:15px;letter-spacing:-.02em;color:var(--cream);text-shadow:0 1px 10px rgba(40,30,45,.45);transition:opacity 200ms ease}
+.nav-btn:hover{opacity:.7}
+.nav-in{animation:navIn 600ms var(--ease-rise) backwards}
+header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px clamp(20px,4vw,56px)}
+.wordmark{font-family:'Instrument Serif',serif;font-size:22px;letter-spacing:0}
+.top-links{display:flex;align-items:center;gap:clamp(14px,2.4vw,28px);padding:2px 26px;border-radius:999px;background:rgba(43,38,48,.28);border:1px solid rgba(255,253,248,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:opacity 500ms ease,visibility 500ms}
+.top-links .nav-btn{font-size:18px;font-weight:500;text-shadow:0 1px 12px rgba(40,30,45,.6)}
+.top-links .nav-btn[aria-current="page"]{border-bottom:1px solid rgba(255,253,248,.9)}
+.sep{color:rgba(255,253,248,.8);font-size:16px}
+.menu-toggle{display:none}
+/* off home, give the wordmark and menu button the same frosted pill as the menu so they stay legible over white cards */
+.wordmark,.menu-toggle{padding:2px 16px;margin-left:-16px;border-radius:999px;border:1px solid transparent;transition:opacity 200ms ease,background-color 500ms ease,border-color 500ms ease}
+.menu-toggle{margin:0 -4px 0 0}
+body:not([data-page="home"]) .wordmark,.menu-toggle{background-color:rgba(43,38,48,.28);border-color:rgba(255,253,248,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+body[data-page="about"] .top-links,body[data-page="about"] .wordmark,body[data-page="about"] .menu-toggle,body[data-page="about"] .top-links.open{background-color:rgba(43,38,48,.58)}
+body[data-page="home"] .top-links,body[data-page="home"] .menu-toggle{visibility:hidden;opacity:0;pointer-events:none}
 
-  .view { display: none; }
-  .view.on { display: flex; }
+/* track */
+.viewport{position:fixed;inset:0;overflow:hidden}
+.track{display:flex;width:100%;height:100%;transform:translateX(var(--track-shift,0%));transition:transform 900ms var(--ease-glide);will-change:transform}
+.panel{flex:0 0 100%;height:100%;overflow-y:auto;padding:96px 20px 48px;scrollbar-width:thin}
+.panel.center{display:flex;align-items:center;justify-content:center}
+.card{opacity:0;transform:translateY(28px);transition:opacity 600ms ease,transform 800ms var(--ease-rise);will-change:transform,opacity}
+.panel.on .card{opacity:1;transform:none;transition-delay:280ms}
 
-  #home { position: relative; z-index: 2; min-height: 100vh; flex-direction: column; align-items: center; justify-content: center; gap: clamp(48px, 9vh, 96px); padding: 160px 20px 64px; }
-  .kao { font-family: 'Zen Old Mincho', 'Hiragino Sans', 'Noto Sans Symbols 2', 'Segoe UI Symbol', sans-serif; font-size: clamp(56px, 13vw, 168px); line-height: 1.2; letter-spacing: 0.02em; white-space: nowrap; background: linear-gradient(100deg, #FFFFFF 0%, #E3D4F5 8%, #CFE6F7 18%, #D6F2E6 28%, #FBF4D8 38%, #FBDDE8 46%, #FFFFFF 50%, #E3D4F5 58%, #CFE6F7 68%, #D6F2E6 78%, #FBF4D8 88%, #FBDDE8 96%, #FFFFFF 100%); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 2px 1px rgba(120,72,60,0.35)) drop-shadow(0 0 14px rgba(255,255,255,0.55)); animation: shimmer 9s linear infinite, bob 7s ease-in-out infinite; }
-  .menu { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(22px, 4vw, 40px); font-family: 'IBM Plex Mono', monospace; font-size: clamp(13px, 1.7vw, 16px); letter-spacing: 0.22em; text-transform: uppercase; color: #4A3228; }
-  .menu a { white-space: nowrap; cursor: pointer; padding-bottom: 3px; text-decoration: none; color: #4A3228; }
-  .menu a:hover { color: #C0447A; }
+/* home */
+.hero-name{margin:0;font-family:'Jacquard 24',serif;font-weight:400;font-size:clamp(68px,12vw,176px);line-height:.86;color:var(--cream);text-shadow:0 2px 24px rgba(40,30,45,.28)}
+.hero-line{margin:22px auto 0;max-width:460px;font-size:16px;line-height:1.32;letter-spacing:-.035em;font-weight:500;text-shadow:0 1px 10px rgba(40,30,45,.5)}
+.hero-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 18px;margin-top:30px}
+.hero-nav .nav-btn{font-size:19px;font-weight:500;padding:10px 8px;text-shadow:0 1px 12px rgba(40,30,45,.6)}
+.hero-nav .nav-btn:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+.status{margin:28px 0 0;display:flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.01em;text-shadow:0 1px 8px rgba(40,30,45,.5)}
+.dot{width:7px;height:7px;border-radius:50%;background:#d8f5c8;box-shadow:0 0 8px #d8f5c8;animation:pulse 2.4s ease-in-out infinite}
 
-  .page { position: relative; z-index: 5; min-height: 100vh; background-color: #FFFFFF; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)' opacity='0.22'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.016' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='500' height='500' filter='url(%23p)' opacity='0.1'/%3E%3C/svg%3E"); background-size: 160px 160px, 500px 500px; background-blend-mode: multiply, multiply; flex-direction: column; align-items: center; animation: fadeup 0.35s ease both; }
-  #about { padding: clamp(132px, 17vh, 186px) 24px 56px; }
-  #works { padding: clamp(132px, 17vh, 176px) 24px 56px; }
-  #contact { padding: 160px 24px 64px; justify-content: center; gap: 22px; }
+/* content cards */
+.sheet{margin:0 auto;color:var(--ink);padding:clamp(24px,4vw,52px)}
+.sheet.frost{background:rgba(250,248,244,.84)}
+.sheet.white{background:#fff;border-radius:28px;padding:clamp(20px,3.5vw,40px);box-shadow:0 20px 60px rgba(40,45,30,.16)}
+.sheet.raised{background:rgba(250,248,244,.92);border-radius:28px;box-shadow:0 2px 6px rgba(40,30,45,.06),0 24px 60px rgba(40,30,45,.2)}
+.h{font-family:'Jacquard 24',serif;font-weight:400;line-height:.9;margin:0}
+.serif{font-family:'Instrument Serif',serif}
+.lede{margin:0 0 24px;font-size:15px;line-height:1.5;letter-spacing:-.02em}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:8px 24px;border-top:1px solid rgba(43,42,46,.22);padding:16px 0}
+.role{font-family:'Instrument Serif',serif;font-size:22px;line-height:1.1}
+.meta{font-size:12px;margin-top:4px}
+.body{font-size:14px;line-height:1.55;letter-spacing:-.02em}
+.body ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.project{background:#fff;border-radius:16px;padding:10px 10px 14px;box-shadow:0 6px 20px rgba(40,30,45,.07);display:flex;flex-direction:column;gap:6px}
+.project img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:10px}
+.project .t{font-family:'Instrument Serif',serif;font-size:19px;line-height:1.1;margin-top:4px}
+.project .k{font-size:11px;color:var(--accent)}
+.project p{margin:0;font-size:12.5px;line-height:1.45;letter-spacing:-.02em}
+.project .result{padding-left:8px;border-left:2px solid var(--note)}
+.project .links{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;margin-top:2px}
+.eyebrow{margin-top:18px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.upcoming{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:8px}
+.upcoming>div{display:flex;gap:10px;align-items:center;font-size:12.5px;line-height:1.3}
+.upcoming img{width:64px;height:44px;flex:none;object-fit:cover;border-radius:8px;filter:grayscale(1)}
+.upcoming span{color:var(--muted)}
+.pill{min-height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);font-size:14px;letter-spacing:-.02em;cursor:pointer;transition:transform 200ms ease}
+.pill.dark{background:var(--ink);color:#fff;border:0;min-height:46px}
+.pill:hover{transform:translateY(-1px)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 
-  .h1 { font-family: 'Zen Old Mincho', serif; font-size: clamp(32px, 5vw, 52px); letter-spacing: 0.34em; text-transform: uppercase; color: #4A3228; transform: scaleX(0.9); }
-  .rule { width: 92px; height: 1px; background: #E8AEC0; margin: 26px 0 40px; }
-  .body { max-width: 560px; font-family: 'Zen Old Mincho', serif; font-size: 17px; line-height: 2.05; color: #3A2A22; text-wrap: pretty; display: flex; flex-direction: column; gap: 20px; }
-  .body p { margin: 0; }
-  .body a { color: #3A2A22; text-decoration: none; border-bottom: 1px solid #E8AEC0; }
-  .body a:hover { color: #C0447A; border-bottom-color: #C0447A; }
-  .about-grid { width: 100%; max-width: 920px; display: grid; grid-template-columns: 168px 1fr; gap: clamp(28px, 5vw, 56px); align-items: start; }
-  .about-nav { display: flex; flex-direction: column; gap: 8px; font-family: 'Zen Old Mincho', serif; font-size: 15px; letter-spacing: 0.04em; line-height: 1.5; border-right: 1px solid #F0DCE2; padding-right: clamp(16px, 3vw, 32px); }
-  .about-nav span { cursor: pointer; padding: 5px 0; color: #C0447A; border-bottom: 1px solid transparent; align-self: flex-start; }
-  .about-nav span:hover { color: #4A3228; }
-  .about-nav span.on { color: #4A3228; border-bottom-color: #E8AEC0; }
-  .about-body { font-family: 'Zen Old Mincho', serif; font-size: 17px; line-height: 2.05; color: #3A2A22; text-wrap: pretty; }
-  .about-body p { margin: 0; }
-  .about-body a { color: #3A2A22; text-decoration: none; border-bottom: 1px solid #E8AEC0; }
-  .about-body a:hover { color: #C0447A; border-bottom-color: #C0447A; }
-  .tabpane { display: none; flex-direction: column; gap: 20px; }
-  .tabpane.on { display: flex; }
-  .todo { color: #C0447A; }
-  .tl { display: flex; flex-direction: column; gap: 28px; margin-top: 18px; }
-  .tl-track { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; padding: 4px 2px 2px; }
-  .tl-node { all: unset; position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px; cursor: pointer; text-align: center; }
-  .tl-fig { position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; outline: 1px solid rgba(58,42,34,0.12); transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease, outline-color .35s ease, filter .35s ease; filter: saturate(0.75); opacity: 0.85; }
-  .tl-fig img { display: block; width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
-  .tl-fn { position: absolute; top: 6px; left: 7px; font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.12em; white-space: nowrap; line-height: 1; }
-  .tl-axis { position: relative; width: calc(100% + 10px); height: 11px; display: flex; justify-content: center; align-items: center; }
-  .tl-axis::before { content: ''; position: absolute; left: 0; right: 0; top: 5px; height: 1px; background: #E8AEC0; }
-  .tl-node:first-child .tl-axis::before { left: 50%; }
-  .tl-node:last-child .tl-axis::before { right: 50%; }
-  .tl-dot { position: relative; width: 9px; height: 9px; border-radius: 50%; background: #FBF5F2; border: 1px solid #C0447A; transition: transform .3s ease, background .3s ease, box-shadow .3s ease; }
-  .tl-y { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6A5E; line-height: 1.5; transition: color .3s ease; }
-  .tl-node:hover .tl-fig { transform: translateY(-3px); filter: none; opacity: 1; }
-  .tl-node.on .tl-fig { transform: translateY(-5px); filter: none; opacity: 1; outline: 1px solid #C0447A; box-shadow: 0 10px 22px -12px rgba(138,30,76,0.55); }
-  .tl-node:hover .tl-y, .tl-node.on .tl-y { color: #C0447A; }
-  .tl-node.on .tl-dot { background: #C0447A; transform: scale(1.35); box-shadow: 0 0 0 5px rgba(192,68,122,0.14); }
-  .tl-node:focus-visible { outline: 2px solid #C0447A; outline-offset: 4px; border-radius: 4px; }
-  .tl-pane { display: none; flex-direction: column; gap: 16px; }
-  .tl-pane.on { display: flex; animation: tlIn .5s cubic-bezier(.2,.7,.2,1); }
-  @keyframes tlIn { from { opacity: 0; transform: translateY(10px); filter: blur(3px); } to { opacity: 1; transform: none; filter: none; } }
-  @media (prefers-reduced-motion: reduce) { .tl-pane.on { animation: none; } }
-  @media (max-width: 620px) {
-    .tl-track { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 22px; padding-top: 8px; }
-    .tl-node:nth-child(3n+1) .tl-axis::before { left: 50%; }
-    .tl-node:nth-child(3n) .tl-axis::before { right: 50%; }
-  }
-  .era { display: grid; grid-template-columns: 132px 1fr; gap: 24px; align-items: baseline; }
-  .era-y { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #C0447A; line-height: 2.6; }
-  .era-b { display: flex; flex-direction: column; gap: 16px; }
-  .era-rule { width: 60px; height: 1px; background: #E8AEC0; margin: 6px 0; }
-  @media (max-width: 620px) { .era { grid-template-columns: 1fr; gap: 6px; } .era-y { line-height: 1.6; } }
-  .plainlist { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; }
-  .plainlist li { display: grid; grid-template-columns: 14px 1fr; gap: 12px; }
-  .plainlist .plus { color: #C0447A; }
-  .plainlist .qual { color: #8A6455; }
-  @media (max-width: 620px) { .about-grid { grid-template-columns: minmax(0, 1fr); } .about-nav { border-right: none; border-bottom: 1px solid #F0DCE2; padding-right: 0; padding-bottom: 18px; } }
-  .tabpane.music { position: relative; gap: 22px; padding: clamp(22px, 4vw, 36px); border-radius: 22px; background: linear-gradient(135deg, #F7C6D8 0%, #EFB6D6 30%, #E3C2EE 55%, #F9D3D8 80%, #F4B5CB 100%); color: #3A2A22; overflow: hidden; isolation: isolate; border: 1px solid rgba(255,255,255,0.7); box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 -20px 40px -20px rgba(192,68,122,0.25), 0 20px 40px -24px rgba(142,42,90,0.45); }
-  .tabpane.music::before { content: ''; position: absolute; inset: -20%; z-index: -1; background: conic-gradient(from 210deg at 70% 30%, rgba(255,255,255,0) 0deg, rgba(190,225,255,0.55) 60deg, rgba(255,255,255,0) 120deg, rgba(255,214,236,0.6) 200deg, rgba(214,200,255,0.5) 280deg, rgba(255,255,255,0) 360deg), radial-gradient(45% 35% at 20% 8%, rgba(255,255,255,0.75), transparent 70%), radial-gradient(40% 40% at 90% 95%, rgba(192,68,122,0.35), transparent 70%); filter: blur(18px); }
-  .tabpane.music::after { content: ''; position: absolute; inset: 0; z-index: -1; opacity: .35; background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.35) 0 1px, transparent 1px 7px), radial-gradient(rgba(142,42,90,0.35) 0.6px, transparent 0.9px); background-size: auto, 5px 5px; pointer-events: none; }
-  .m-head { margin: 0; font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #8E2A5A; line-height: 1.6; }
-  .m-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 18px; }
-  .about-body a.m-card { display: flex; flex-direction: column; border: none; border-radius: 12px; overflow: hidden; background: #FBF5F2; color: #3A2A22; box-shadow: 0 1px 0 rgba(0,0,0,0.08), 0 10px 24px -12px rgba(40,6,24,0.6); transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease; }
-  .about-body a.m-card:hover { color: #3A2A22; transform: translateY(-4px) rotate(-0.6deg); box-shadow: 0 1px 0 rgba(0,0,0,0.08), 0 18px 30px -14px rgba(40,6,24,0.7); }
-  .m-art { position: relative; display: block; aspect-ratio: 1 / 1; overflow: hidden; background: #F4A9C0; }
-  .m-art::after { content: ''; position: absolute; inset: 0; z-index: 1; background-image: radial-gradient(rgba(90,16,52,0.55) 0.9px, transparent 1.3px); background-size: 4px 4px; mix-blend-mode: multiply; pointer-events: none; }
-  .m-art { background: #FBF0E8; }
-  .m-fig::before, .m-fig::after { display: none; }
-  .m-fig img { display: block; width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
-  .m-card:hover .m-fig img { transform: scale(1.04); }
-  .about-nav span { line-height: 1.35; }
-  .m-art.m-fig .m-no { padding: 0; background: none; border-radius: 0; font-size: 9px; position: absolute; top: 8px; left: 9px; z-index: 2; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.14em; white-space: nowrap; }
-  .m-art i { position: absolute; display: block; mix-blend-mode: multiply; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
-  .m-card:hover .m-art i:nth-child(1) { transform: translate(-4px, 3px); }
-  .m-card:hover .m-art i:nth-child(2) { transform: translate(5px, -4px) rotate(4deg); }
-  .m-card:hover .m-art i:nth-child(3) { transform: scale(1.08); }
-  .m-card:nth-child(5n+1) .m-art i:nth-child(1) { width: 78%; aspect-ratio: 1; left: -8%; top: 6%; border-radius: 50%; background: #FF5CA8; }
-  .m-card:nth-child(5n+1) .m-art i:nth-child(2) { width: 90%; height: 46%; right: -14%; bottom: -6%; border-radius: 999px 999px 0 0; background: #4A6FD0; opacity: .85; }
-  .m-card:nth-child(5n+1) .m-art i:nth-child(3) { width: 18%; aspect-ratio: 1; right: 16%; top: 14%; border-radius: 50%; background: #FFD84A; }
-  .m-card:nth-child(5n+2) .m-art i:nth-child(1) { inset: 0; background: repeating-linear-gradient(-35deg, #4A6FD0 0 9px, transparent 9px 22px); opacity: .7; }
-  .m-card:nth-child(5n+2) .m-art i:nth-child(2) { width: 62%; aspect-ratio: 1; left: 19%; top: 18%; border-radius: 50%; background: #FF5CA8; }
-  .m-card:nth-child(5n+2) .m-art i:nth-child(3) { width: 100%; height: 22%; left: 0; bottom: 0; background: #FFD84A; }
-  .m-card:nth-child(5n+3) .m-art i:nth-child(1) { width: 64%; height: 82%; left: 18%; bottom: 0; border-radius: 999px 999px 0 0; background: #FF5CA8; }
-  .m-card:nth-child(5n+3) .m-art i:nth-child(2) { width: 34%; aspect-ratio: 1; left: 33%; top: 12%; border-radius: 50%; background: #FFD84A; }
-  .m-card:nth-child(5n+3) .m-art i:nth-child(3) { width: 100%; height: 28%; left: 0; bottom: 0; background: repeating-linear-gradient(0deg, #4A6FD0 0 4px, transparent 4px 9px); }
-  .m-card:nth-child(5n+4) .m-art i:nth-child(1) { width: 120%; aspect-ratio: 1; left: -10%; top: -10%; border-radius: 50%; background: repeating-radial-gradient(circle, #FF5CA8 0 6px, transparent 6px 14px); opacity: .85; }
-  .m-card:nth-child(5n+4) .m-art i:nth-child(2) { width: 56%; height: 48%; right: -6%; bottom: -4%; border-radius: 62% 38% 46% 54% / 58% 44% 56% 42%; background: #4A6FD0; }
-  .m-card:nth-child(5n+4) .m-art i:nth-child(3) { width: 26%; aspect-ratio: 1; left: 12%; bottom: 14%; background: #FFD84A; transform: rotate(18deg); }
-  .m-card:nth-child(5n+5) .m-art i:nth-child(1) { width: 100%; height: 58%; left: 0; top: 0; background: #FFD84A; border-radius: 0 0 50% 50% / 0 0 22% 22%; }
-  .m-card:nth-child(5n+5) .m-art i:nth-child(2) { inset: 0; background-image: radial-gradient(#FF5CA8 4px, transparent 4.5px); background-size: 18px 18px; }
-  .m-card:nth-child(5n+5) .m-art i:nth-child(3) { width: 48%; aspect-ratio: 1; right: 8%; bottom: 8%; border-radius: 50%; background: #4A6FD0; opacity: .9; }
-  .m-art::before { content: ''; position: absolute; inset: 0; z-index: 1; opacity: .5; mix-blend-mode: multiply; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .4 0 0 0 0 .38 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
-  .m-no { position: absolute; z-index: 2; top: 10px; left: 10px; padding: 2px 7px; border-radius: 999px; background: #FBF5F2; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; line-height: 1.6; color: #8E2A5A; }
-  .m-meta { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px 14px; line-height: 1.45; }
-  .m-artist { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8E2A5A; }
-  .m-title { font-size: 16px; }
-  .m-note { font-size: 13px; color: #7A5A4E; margin-top: 4px; }
-  @media (prefers-reduced-motion: reduce) { .about-body a.m-card, .m-art i { transition: none; } }
-  .back { display: inline-block; margin-top: 46px; padding: 14px 10px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A6455; text-decoration: none; }
+/* about */
+.about-photo{display:block;width:100%;height:auto;max-width:620px;margin:0 auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%;border-radius:18px}
+.column{max-width:540px;margin:0 auto}
+.column p{margin:0 0 12px;font-size:15px;line-height:1.5;letter-spacing:-.035em}
+.list{font-size:14px;line-height:1.42;letter-spacing:-.035em}
+.li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px;padding:14px 0;border-top:1px solid rgba(43,42,46,.14)}
+.li .yr{font-size:12px;color:var(--muted)}
+.li b{font-weight:600}
 
-  .list { width: 100%; max-width: 660px; display: flex; flex-direction: column; }
-  .list-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 1px solid #4A3228; padding-bottom: 10px; }
-  .list-head span:first-child { font-family: 'Zen Old Mincho', serif; font-size: clamp(20px, 3.4vw, 28px); letter-spacing: 0.24em; text-transform: uppercase; color: #4A3228; }
-  .years { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #C0447A; white-space: nowrap; }
-  .row { display: grid; grid-template-columns: 52px 1fr 104px; gap: 16px; align-items: baseline; padding: 13px 0; border-bottom: 1px solid #F0DCE2; font-family: 'Zen Old Mincho', serif; color: #3A2A22; }
-  .yr { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #C0447A; }
-  .ti { font-size: 17px; }
-  .row a.ti { color: #3A2A22; text-decoration: none; border-bottom: 1px solid #E8AEC0; }
-  .row a.ti:hover { color: #C0447A; border-bottom-color: #C0447A; }
-  .tw { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-  .st { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #C98DA4; }
-  .sub { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8A6455; line-height: 1.7; }
-  .sub a { color: #8A6455; text-decoration: none; border-bottom: 1px solid #E8AEC0; }
-  .sub a:hover { color: #C0447A; border-bottom-color: #C0447A; }
-  .row.soon { color: #A38C84; }
-  .row.soon .ti { color: #A38C84; }
-  .row.soon .yr, .row.soon .kd { color: #CDAFA8; }
-  .more { align-self: flex-end; margin-top: 22px; padding: 10px 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #C0447A; text-decoration: none; border-bottom: 1px solid #E8AEC0; }
-  .more:hover { color: #4A3228; border-bottom-color: #4A3228; }
-  .kd { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6455; text-align: right; }
+/* contact */
+.email{font-family:'Instrument Serif',serif;font-size:clamp(26px,4.4vw,38px);line-height:1.1;word-break:break-all}
 
-  .c-label { font-family: 'Zen Old Mincho', serif; font-size: clamp(18px, 3vw, 26px); letter-spacing: 0.3em; text-transform: uppercase; color: #4A3228; }
-  .c-mail { font-family: 'Zen Old Mincho', serif; font-size: clamp(22px, 4.4vw, 34px); color: #3A2A22; text-align: center; line-height: 1.5; }
-  #contact > * { flex-shrink: 0; max-width: 100%; }
-  .back { white-space: nowrap; }
-  a:focus-visible, [role="tab"]:focus-visible { outline: 2px solid #C0447A; outline-offset: 3px; }
-  .c-mail a { white-space: nowrap; color: #3A2A22; text-decoration: none; border-bottom: 2px solid #E8AEC0; }
-  .c-mail a:hover { color: #C0447A; border-bottom-color: #C0447A; }
-  .socials { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 18px; row-gap: 4px; margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; }
-  .socials a { display: inline-block; min-width: 44px; box-sizing: border-box; text-align: center; padding: 14px 6px; color: #8A6455; text-decoration: underline; text-decoration-color: #E8AEC0; text-decoration-thickness: 1px; text-underline-offset: 5px; }
-  .socials a:hover { color: #C0447A; text-decoration-color: #C0447A; }
-
-  @media (max-width: 520px) {
-    .row { grid-template-columns: 44px 1fr; }
-    .kd { grid-column: 2; text-align: left; }
-  }
+@media (max-width:720px){
+  .top-links{display:none}
+  .top-links.open{display:flex;flex-direction:column;gap:2px;position:absolute;top:70px;right:16px;padding:12px 20px;border-radius:18px;background:rgba(43,42,46,.55)}
+  .top-links .sep{display:none}
+  .menu-toggle{display:inline-block}
+  .row{grid-template-columns:minmax(0,1fr)}
+  .li{grid-template-columns:minmax(0,1fr);gap:2px}
+}
+@media (prefers-reduced-motion:reduce){*{animation-duration:1ms!important;transition-duration:1ms!important}}
 </style>
 </head>
-<body>
-<div class="tex"></div>
-<div class="fib"></div>
-<div class="pulp"></div>
-<div class="speck"></div>
-<div class="vig"></div>
+<body data-page="home">
 
+<div class="bg" aria-hidden="true">
+  <img class="hero" src="img/home-hero-bg.jpg" alt="" width="736" height="1104" fetchpriority="high">
+  <img class="about" src="img/home-about-bg.jpg" alt="" width="721" height="946">
+</div>
+<div class="vignette" aria-hidden="true"></div>
 
-<h1 class="mark"><a href="#">Amina Green</a></h1>
-
-<main>
-<section id="home" class="view on">
-  <div class="kao">(๑•ᴗ•๑)</div>
-  <nav class="menu">
-    <a href="#about">about</a>
-    <a href="#works">selected works</a>
-    <a href="#contact">contact</a>
+<header>
+  <button class="nav-btn nav-in wordmark" data-go="home">Amina Green</button>
+  <button class="nav-btn menu-toggle" aria-expanded="false" aria-controls="top-links">menu</button>
+  <nav id="top-links" class="top-links" aria-label="Main">
+    <button class="nav-btn nav-in" data-go="about" style="animation-delay:120ms">about</button>
+    <span class="sep nav-in" aria-hidden="true" style="animation-delay:200ms">|</span>
+    <button class="nav-btn nav-in" data-go="work" style="animation-delay:200ms">work</button>
+    <span class="sep nav-in" aria-hidden="true" style="animation-delay:280ms">|</span>
+    <button class="nav-btn nav-in" data-go="contact" style="animation-delay:280ms">contact</button>
   </nav>
-</section>
+</header>
 
-<section id="about" class="view page">
-  <h2 class="h1">About</h2>
-  <div class="rule"></div>
-  <div class="about-grid">
-    <nav class="about-nav" role="tablist" aria-label="About sections">
-      <span data-tab="bio" class="on" role="tab" tabindex="0" aria-selected="true">Bio</span>
-      <span data-tab="care" role="tab" tabindex="0" aria-selected="false">What I care about</span>
-      <span data-tab="hobbies" role="tab" tabindex="0" aria-selected="false">Hobbies &amp; artistic pursuits</span>
-      <span data-tab="music" role="tab" tabindex="0" aria-selected="false" hidden>Music</span>
-    </nav>
-    <div class="about-body">
-      <div class="tabpane on" data-pane="bio">
-        <p>I'm Amina Green. I make videos about technology and society, and have a professional and academic background in computer science and social science.</p>
-        <p>I previously <a href="https://www.japantimes.co.jp/community/2017/02/19/our-lives/african-american-idol-aminyan-difference-double-edged-sword/" target="_blank" rel="noopener">worked as an idol in Japan</a> under the name <a href="https://www.tv-tokyo.co.jp/information/2016/12/19/196791.html" target="_blank" rel="noopener">aminyan</a> or Amina du Jean. Now I'm a <a href="https://www.youtube.com/@amina-io/videos" target="_blank" rel="noopener">video producer</a>, writer and technologist in San Francisco, and a <a href="https://www.framefellowship.com/" target="_blank" rel="noopener">Frame Fellow</a> making AI safety videos with <a href="https://www.matsprogram.org/" target="_blank" rel="noopener">MATS Research</a>.</p>
-        <p>I also host events and salons in SF that bring people together!</p>
-        <div class="tl">
-          <div class="tl-track" role="tablist" aria-label="Timeline">
-            <button class="tl-node on" role="tab" aria-selected="true" aria-controls="era-0" id="tl-0" aria-label="2010–2014"><span class="tl-fig"><img src="tl/fig-01.png" alt="Pixel illustration of a handheld game console" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#8A1E4C">FIG. 01</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2010 ~ 2014</span></button>
-            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-1" id="tl-1" aria-label="2014–2017"><span class="tl-fig"><img src="tl/fig-02.png" alt="Pixel illustration of a microphone with sparkles" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#F2CFC8">FIG. 02</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2014 ~ 2017</span></button>
-            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-2" id="tl-2" aria-label="2017–2020"><span class="tl-fig"><img src="tl/fig-03.png" alt="Pixel illustration of an open book" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#8A1E4C">FIG. 03</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2017 ~ 2020</span></button>
-            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-3" id="tl-3" aria-label="2020–2023"><span class="tl-fig"><img src="tl/fig-04.png" alt="Pixel illustration of a laptop with a code prompt" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#D98AA4">FIG. 04</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2020 ~ 2023</span></button>
-            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-4" id="tl-4" aria-label="2023–2025"><span class="tl-fig"><img src="tl/fig-05.png" alt="Pixel illustration of a heart with a pulse line" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#8A1E4C">FIG. 05</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">2023 ~ 2025</span></button>
-            <button class="tl-node" role="tab" aria-selected="false" aria-controls="era-5" id="tl-5" aria-label="September 2026–present"><span class="tl-fig"><img src="tl/fig-06.png" alt="Pixel illustration of a film camera" width="240" height="300" loading="lazy"><span class="tl-fn" style="color:#FBE3E6">FIG. 06</span></span><span class="tl-axis"><span class="tl-dot"></span></span><span class="tl-y">Sept 2026 ~ Present</span></button>
+<main class="viewport">
+  <div class="track">
+
+    <!-- 0 HOME -->
+    <section class="panel center on" data-panel="home" aria-label="Home">
+      <div class="card" style="text-align:center;width:min(100%,980px);display:flex;flex-direction:column;align-items:center">
+        <h1 class="hero-name">Amina Green</h1>
+        <p class="hero-line">creator, researcher &amp; writer, curious about<br>our relationship to machines</p>
+        <nav class="hero-nav" aria-label="Home menu">
+          <button class="nav-btn nav-in" data-go="about" style="animation-delay:120ms">about</button>
+          <span class="sep" aria-hidden="true">|</span>
+          <button class="nav-btn nav-in" data-go="work" style="animation-delay:200ms">work</button>
+          <span class="sep" aria-hidden="true">|</span>
+          <button class="nav-btn nav-in" data-go="contact" style="animation-delay:280ms">contact</button>
+        </nav>
+        <p class="status"><span class="dot" aria-hidden="true"></span>currently: making AI safety media @ MATS Research</p>
+      </div>
+    </section>
+
+    <!-- 1 WORK -->
+    <section class="panel" data-panel="work" aria-label="Work">
+      <div class="card sheet frost" style="width:min(100%,760px)">
+        <h2 class="h" style="margin-bottom:12px;font-size:clamp(48px,7vw,72px)">Work</h2>
+        <p class="lede">Research, data and media, mostly about people and the machines they live with.</p>
+
+        <div style="border-top:1px solid rgba(43,42,46,.22);padding:16px 0 20px">
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px"><div class="role">Frame Fellowship</div><div class="meta" style="margin:0">AI-focused media accelerator · 2026</div></div>
+          <p class="body" style="margin:8px 0 16px">Making video essays, interviews and campaigns on AI safety and governance.</p>
+          <div class="projects">
+            <article class="project">
+              <img src="img/home-mats-residency.jpg" width="346" height="214" alt="Ryan Kidd in the MATS Residency campaign interview">
+              <div class="t">MATS Residency campaign, featuring Ryan Kidd</div>
+              <div class="k">Campaign · sizzle reel + extended interview</div>
+              <p class="result">About 30,000 views in the first 24 hours, and Residency applications doubled.</p>
+              <div class="links"><a href="https://x.com/MATSprogram/status/2110458189434990596">sizzle reel →</a><a href="https://www.youtube.com/watch?v=SDdt7NpRqjA">full interview →</a></div>
+            </article>
+            <article class="project">
+              <img src="img/home-governance.jpg" width="346" height="213" alt="Erik Leklem interview thumbnail: Start building now">
+              <div class="t">AI Governance Can't Wait for a Treaty</div>
+              <div class="k">Interview · featuring Erik Leklem</div>
+              <p>International AI agreements, verification and compute governance, with a former Department of Defense official.</p>
+              <div class="links"><a href="https://x.com/MATSprogram/status/2118072095796322536">watch on X →</a></div>
+            </article>
+            <article class="project">
+              <img src="img/home-info-age.jpg" width="346" height="213" alt="Amina in her video essay Lessons from the Information Age" style="object-position:60% 30%">
+              <div class="t">Lessons from the Information Age</div>
+              <div class="k">Video essay</div>
+              <p>What the information age can teach us about the shift into the intelligence age.</p>
+              <div class="links"><a href="https://www.youtube.com/watch?v=LZPrU5hMaiM">watch on YouTube →</a></div>
+            </article>
           </div>
-          <div class="tl-pane on" role="tabpanel" id="era-0" aria-labelledby="tl-0">
-            <p>I started private Japanese lessons at eleven, in my small Michigan town, and streaming on Nico Nico Douga not long after.</p>
-            <p>Around the same time I made a chiptune album with the Detroit collective Piko Piko Detroit, and played the Detroit Electronic Music Festival and smaller stages near Ann Arbor while still in high school.</p>
-          </div>
-          <div class="tl-pane" role="tabpanel" id="era-1" aria-labelledby="tl-1">
-            <p>I got a contract to perform as an idol in Japan and spent three years on television, including the variety show <span lang="ja">「YOUは何しに日本へ？」</span>, and on work with companies like <a href="https://www.bandainamco.co.jp/en/" target="_blank" rel="noopener">Bandai Namco</a>. I picked up an award in <a href="https://www.kodansha.co.jp/" target="_blank" rel="noopener">Kodansha</a>'s Miss iD 2016 and got written about in <a href="https://www.forbes.com/sites/adelsteinjake/2017/09/28/japans-first-black-pop-idol-retires-with-a-fierce-final-ballad/" target="_blank" rel="noopener">Forbes</a>, Playboy Japan and <a href="https://www.japantimes.co.jp/community/2017/02/19/our-lives/african-american-idol-aminyan-difference-double-edged-sword/" target="_blank" rel="noopener">The Japan Times</a>. I also studied at Temple University Japan.</p>
-          </div>
-          <div class="tl-pane" role="tabpanel" id="era-2" aria-labelledby="tl-2">
-            <p>London, reading anthropology and sociology, with a dissertation on Eastern European women and labor. I sat on the board of <a href="https://tampep.eu/" target="_blank" rel="noopener">TAMPEP</a> and spoke at Amnesty International and an EU parliamentary meeting; my last major activism event was Stockholm in 2019.</p>
-          </div>
-          <div class="tl-pane" role="tabpanel" id="era-3" aria-labelledby="tl-3">
-            <p>A non-profit in San Francisco, then industry. I taught myself Python on nights and weekends.</p>
-          </div>
-          <div class="tl-pane" role="tabpanel" id="era-4" aria-labelledby="tl-4">
-            <p>A Master's in Computer Science and HCI, researching biosensing-enabled agents and empathic computing. Head of Data &amp; Growth at a venture-backed creator economy start-up, MintStars. I also collaborated on human&#8211;AI interaction research for Bridging Bot at <a href="https://www.plurality.institute/" target="_blank" rel="noopener">Plurality Institute</a>.</p>
-          </div>
-          <div class="tl-pane" role="tabpanel" id="era-5" aria-labelledby="tl-5">
-            <p>Video and AI safety content at MATS, and my own on Instagram and X.</p>
+          <div class="eyebrow">Upcoming interviews</div>
+          <div class="upcoming">
+            <div><img src="img/home-ran.jpg" width="209" height="127" alt="Ran Sun"><div><i>AI Safety and China</i><br><span>with Ran Sun</span></div></div>
+            <div><img src="img/home-anita.jpg" width="210" height="127" alt="Anita Srinivasan"><div><i>Who Is Liable When AI Goes Wrong?</i><br><span>with Anita Srinivasan</span></div></div>
+            <div><img src="img/home-atharva.jpg" width="209" height="127" alt="Atharva Nihalani"><div><i>Can We Verify AI Compute?</i><br><span>with Atharva Nihalani</span></div></div>
           </div>
         </div>
-      </div>
-      <div class="tabpane" data-pane="care">
-        <p>Treating the people immediately around me well is the thing I care about most. Integrity and joy seem like the most useful things I can offer.</p>
-        <p>My studies and early work went to the labor rights of migrant women, particularly from Eastern Europe and the Global South. I don't work in that field now, but I still care a great deal about the rights of people and other living beings.</p>
-        <p>Growing up around Detroit during de-industrialization, then working in labor rights and studying anthropology, made me attentive to what technology does to social infrastructure. That's what brought me to AI safety. I'm a capitalist, but I want public policy that helps people flourish under it — humane, and clear about where responsibility sits.</p>
-        <p>Right now that means building communities and helping others do the same. I've started a project called kanpai, connecting community stewards with corporate sponsors and individual patrons. Waitlist at <a href="https://kanpai.events" target="_blank" rel="noopener">kanpai.events</a>.</p>
-      </div>
-      <div class="tabpane" data-pane="hobbies">
-        <ul class="plainlist">
-          <li><span class="plus">+</span><span>floral arrangements <span class="qual">— freestyle ikebana</span></span></li>
-          <li><span class="plus">+</span><span>hosting community events <span class="qual">— cybernetics circles, random salons, parties</span></span></li>
-          <li><span class="plus">+</span><span>coding <span class="qual">— games have been fun to make lately</span></span></li>
-          <li><span class="plus">+</span><span>walking &amp; dancing</span></li>
-        </ul>
-      </div>
-      <div class="tabpane music" data-pane="music" hidden>
-        <h3 class="m-head">Current music obsessions</h3>
-        <div class="m-grid">
-          <a class="m-card" href="https://www.youtube.com/watch?v=unjUuTT7uYw" target="_blank" rel="noopener">
-            <span class="m-art m-fig"><img src="music/m-01.png" alt="Pixel illustration of a vinyl record" width="240" height="240" loading="lazy"></span>
-            <span class="m-meta"><span class="m-artist">Moses Sumney</span><span class="m-title">Come to Me</span><span class="m-note">Björk cover</span></span>
-          </a>
-          <a class="m-card" href="https://www.youtube.com/watch?v=gZs20ZNVlAY" target="_blank" rel="noopener">
-            <span class="m-art m-fig"><img src="music/m-02.png" alt="Pixel illustration of DJ turntables" width="240" height="240" loading="lazy"></span>
-            <span class="m-meta"><span class="m-artist">Tentenko</span><span class="m-title">Boiler Room Tokyo set</span><span class="m-note">Noise DJ, former member of the Japanese punk idol group BiS</span></span>
-          </a>
-          <a class="m-card" href="https://readdork.com/music-videos/tentenko-digital-memory-asleep-rhheligc" target="_blank" rel="noopener">
-            <span class="m-art m-fig"><img src="music/m-03.png" alt="Pixel illustration of a crescent moon" width="240" height="240" loading="lazy"></span>
-            <span class="m-meta"><span class="m-artist">Tentenko</span><span class="m-title">Digital Memory Asleep</span></span>
-          </a>
-          <a class="m-card" href="https://www.youtube.com/watch?v=gqwgB2MorK0" target="_blank" rel="noopener">
-            <span class="m-art m-fig"><img src="music/m-04.png" alt="Pixel illustration of a cassette tape" width="240" height="240" loading="lazy"></span>
-            <span class="m-meta"><span class="m-artist">Anamanaguchi</span><span class="m-title">Darcie</span></span>
-          </a>
-          <a class="m-card" href="https://www.youtube.com/watch?v=WoFt3_m76eg" target="_blank" rel="noopener">
-            <span class="m-art m-fig"><img src="music/m-05.png" alt="Pixel illustration of a sunrise over water" width="240" height="240" loading="lazy"></span>
-            <span class="m-meta"><span class="m-artist">Frankie Beverly &amp; Maze</span><span class="m-title">We Are One</span></span>
-          </a>
+
+        <div class="row">
+          <div><div class="role">Head of Data &amp; Growth</div><div class="meta">MintStars · 2022–2025</div></div>
+          <div class="body"><p style="margin:0 0 8px">Led data strategy and growth for a venture-backed creator-economy platform.</p><ul><li>Grew the platform from 15,000 to 100,000 monthly users and reached $1M ARR within a year.</li><li>Built embedding-based ML models for content classification and discovery.</li><li>Automated Python outreach pipelines that increased user engagement.</li><li>Ran mixed-methods research behind 4 major feature launches.</li><li>Set up the company's data infrastructure and documentation.</li></ul></div>
+        </div>
+        <div class="row">
+          <div><div class="role">Research &amp; Growth</div><div class="meta">Plurality Institute · 2023–2026</div></div>
+          <div class="body"><ul><li>Ran the organization's X account.</li><li>Designed, built and deployed an internal research tool in Python using Perplexity's Sonar API.</li><li>Designed and evaluated datasets for the Bridging Bot project, a Google-funded social computing initiative.</li><li>Analyzed 400+ technical papers to build the organization's research knowledge base.</li><li>Facilitated research discussions on governance and ethics at industry conferences.</li></ul></div>
+        </div>
+        <div class="row">
+          <div><div class="role">HCI research</div><div class="meta">MS, UC Santa Cruz</div></div>
+          <p class="body" style="margin:0">Affective computing and how people respond to emotion-aware technology. My final research work was used in a BCI-enabled agent for professional upskilling.</p>
+        </div>
+        <div class="actions">
+          <button class="pill" data-go="contact">get in touch</button>
+          <button class="pill" data-go="writing">writing &amp; video →</button>
         </div>
       </div>
-    </div>
-  </div>
-  <a class="back" href="#">← back</a>
-</section>
+    </section>
 
-<section id="works" class="view page">
-  <h2 class="h1">Selected Works</h2>
-  <div class="rule"></div>
-  <div class="list">
-    <div class="grp">
-      <h3 class="grp-h">Content &amp; Comms</h3>
-      <div class="row"><span class="yr">2026</span><a class="ti" href="https://www.youtube.com/watch?v=LZPrU5hMaiM" target="_blank" rel="noopener">Lessons from the Information Age</a><span class="kd">Video essay</span></div>
-      <div class="row"><span class="yr">2026</span><span class="tw"><a class="ti" href="https://x.com/MATSprogram/status/2118072095796322536" target="_blank" rel="noopener">AI Governance Can&#8217;t Wait for a Treaty</a><span class="sub">MATS Research &middot; featuring Erik Leklem</span></span><span class="kd">Interview</span></div>
-      <div class="row"><span class="yr">2026</span><span class="tw"><span class="ti">MATS Residency campaign, featuring Ryan Kidd</span><span class="sub"><a href="https://x.com/MATSprogram/status/2110458189434990596" target="_blank" rel="noopener">Sizzle reel</a> &middot; <a href="https://www.youtube.com/watch?v=SDdt7NpRqjA" target="_blank" rel="noopener">Full interview</a><br>~30K views in 24h; applications doubled.</span></span><span class="kd">Video</span></div>
-      <div class="row"><span class="yr">2026</span><a class="ti" href="https://x.com/Amina_io/status/2080409233749680370" target="_blank" rel="noopener">Claude Shannon Used Entropy to Measure Information</a><span class="kd">Explainer</span></div>
-      <div class="row"><span class="yr">2026</span><a class="ti" href="https://feelingmachines.substack.com/p/every-extension-is-an-amputation" target="_blank" rel="noopener">Every Extension Is an Amputation, with Andrew McLuhan</a><span class="kd">Interview</span></div>
-    </div>
-    <div class="grp">
-      <h3 class="grp-h">Interactive</h3>
-      <div class="row"><span class="yr">2026</span><span class="tw"><a class="ti" href="/frame/">THE PREDICTOR</a><span class="sub">A two-minute game about Newcomb&#8217;s problem</span></span><span class="kd">Game</span></div>
-      <div class="row soon"><span class="yr">2026</span><span class="tw"><span class="ti">Decision Theory for Dummies!</span><span class="st">In final editing</span></span><span class="kd">Film</span></div>
-    </div>
-    <div class="grp">
-      <h3 class="grp-h">Talks</h3>
-      <div class="row"><span class="yr">2026</span><span class="tw"><span class="ti">I Dream of Candyland</span><span class="sub"><a href="https://dreamshare.social/" target="_blank" rel="noopener">Dreamshare 002</a> &middot; San Francisco</span></span><span class="kd">Talk</span></div>
-      <div class="row"><span class="yr">2025</span><span class="tw"><span class="ti">Catboy Futurism</span><span class="sub"><a href="https://dreamshare.social/" target="_blank" rel="noopener">Dreamshare 001</a> &middot; San Francisco</span></span><span class="kd">Talk</span></div>
-    </div>
-    <div class="grp">
-      <h3 class="grp-h">Essays</h3>
-      <div class="row soon"><span class="yr">2026</span><span class="tw"><span class="ti">The Stories We Tell</span><span class="st">In editing</span></span><span class="kd">Palladium</span></div>
-      <div class="row soon"><span class="yr">2026</span><span class="tw"><span class="ti">Doll Baby</span><span class="st">In final editing</span></span><span class="kd">2dcloud</span></div>
-      <div class="row"><span class="yr">2025</span><a class="ti" href="https://bimbollectual.com/p/anonymous-was-an-anomaly" target="_blank" rel="noopener">Anonymous Was An Anomaly</a><span class="kd">Essay</span></div>
-      <div class="row"><span class="yr">2025</span><a class="ti" href="https://bimbollectual.com/p/how-i-became-a-j-pop-idol" target="_blank" rel="noopener">How I Became a J-Pop Idol</a><span class="kd">Essay</span></div>
-      <div class="row"><span class="yr">2025</span><a class="ti" href="https://bimbollectual.com/p/internet-killed-the-subculture" target="_blank" rel="noopener">Internet Killed The Subculture</a><span class="kd">Essay</span></div>
-      <div class="row"><span class="yr">2025</span><a class="ti" href="https://bimbollectual.com/p/a-messy-guide-to-social-and-cultural" target="_blank" rel="noopener">A Messy Guide to Social &amp; Cultural Capital for Young Americans Of Flyover State Origin</a><span class="kd">Essay</span></div>
-    </div>
-    <div class="grp">
-      <h3 class="grp-h">Upcoming</h3>
-      <div class="row soon"><span class="yr">2026</span><span class="tw"><span class="ti">AI Safety and China</span><span class="sub">with Ran Sun</span></span><span class="kd">Interview</span></div>
-      <div class="row soon"><span class="yr">2026</span><span class="tw"><span class="ti">Who Is Liable When AI Goes Wrong?</span><span class="sub">with Anita Srinivasan</span></span><span class="kd">Interview</span></div>
-      <div class="row soon"><span class="yr">2026</span><span class="tw"><span class="ti">Can We Verify AI Compute?</span><span class="sub">with Atharva Nihalani</span></span><span class="kd">Interview</span></div>
-    </div>
-    <div class="grp">
-      <h3 class="grp-h">Media Appearances</h3>
-      <div class="row"><span class="yr">2017</span><a class="ti" href="https://www.forbes.com/sites/adelsteinjake/2017/09/28/japans-first-black-pop-idol-retires-with-a-fierce-final-ballad/" target="_blank" rel="noopener">Japan's First Black Pop Idol Retires With A Fierce Final Ballad</a><span class="kd">Forbes</span></div>
-    </div>
-  </div>
-  <a class="back" href="#">← back</a>
-</section>
+    <!-- 2 ABOUT -->
+    <section class="panel" data-panel="about" aria-label="About">
+      <article class="card sheet white" style="width:min(100%,880px)">
+        <img class="about-photo" src="img/amina-speaking.jpg" width="560" height="700" alt="Amina speaking at a cybernetics reading group event">
+        <div class="column">
+          <h2 class="h" style="margin-top:32px;font-size:clamp(52px,8vw,80px)">About</h2>
+          <p style="margin-top:16px">Hi, I'm Amina. I'm from Michigan, and I spent a few years in Japan as a <a href="https://bimbollectual.com/p/how-i-became-a-j-pop-idol" style="text-underline-offset:3px">J-pop idol</a>.</p>
+          <p>After that I worked in tech, running data and growth at startups.</p>
+          <p>Now I'm back in media, making videos and writing.</p>
+          <p style="margin-bottom:6px">A few highlights:</p>
+          <div class="list">
+            <div class="li"><span class="yr">2026</span><span><b>Frame Fellow</b>, Cohort 2.0 — a fellowship for AI-focused creators, making media about AI safety.</span></div>
+            <div class="li"><span class="yr">2023–26</span><span><b>Research &amp; Growth</b> at Plurality Institute.</span></div>
+            <div class="li"><span class="yr">2022–25</span><span><b>Head of Data &amp; Growth</b> at MintStars — grew the platform from 15k to 100k monthly users and $1M ARR in a year.</span></div>
+            <div class="li"><span class="yr">ongoing</span><span><b>Co-founded cybernetics//circle</b>, a monthly reading group in San Francisco.</span></div>
+            <div class="li"><span class="yr">ongoing</span><span><b>Writing &amp; video</b> on AI, desire and internet culture, read by ~20k people on X.</span></div>
+            <div class="li"><span class="yr">forthcoming</span><span><b>Essay, "Doll Baby"</b>, commissioned for the <i>Mirror Mirror</i> zine (2dcloud).</span></div>
+            <div class="li"><span class="yr">2024</span><span><b>MS, Human-Computer Interaction</b>, UC Santa Cruz — research on emotion-aware technology.</span></div>
+            <div class="li"><span class="yr">2020</span><span><b>BA, Sociology</b>, University of East London.</span></div>
+            <div class="li"><span class="yr">2019</span><span><b>Consultant</b> on HBO's <i>Tokyo Vice</i>.</span></div>
+            <div class="li"><span class="yr">2016</span><span><b>Judges' runner-up award</b>, Kodansha's Miss iD 2016.</span></div>
+            <div class="li"><span class="yr">2015</span><span><b>Twitch stream host</b>, Tokyo Game Show with Bandai Namco.</span></div>
+          </div>
+          <div class="actions" style="margin-top:26px">
+            <button class="pill dark" data-go="work">check out my work →</button>
+            <button class="pill" data-go="contact" style="min-height:46px">work with me</button>
+          </div>
+        </div>
+      </article>
+    </section>
 
-<section id="contact" class="view page">
-  <h2 class="h1">Contact</h2>
-  <div class="rule" style="margin:0"></div>
-  <div class="c-mail">drop a line!<br><a href="mailto:hello@amina-io.com">hello at amina-io.com</a></div>
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/aminag/" target="_blank" rel="noopener">linkedin</a>
-    <a href="https://www.youtube.com/@amina-io/videos" target="_blank" rel="noopener">youtube</a>
-    <a href="https://x.com/amina_io" target="_blank" rel="noopener">x</a>
-    <a href="https://instagram.com/bimbollectual" target="_blank" rel="noopener">instagram</a>
-    <a href="https://substack.com/@aminaio" target="_blank" rel="noopener">substack</a>
-    <a href="https://github.com/Amina-io" target="_blank" rel="noopener">github</a>
+    <!-- 3 WRITING & VIDEO (reached from the Work page) -->
+    <section class="panel" data-panel="writing" aria-label="Writing and video">
+      <div class="card sheet frost" style="width:min(100%,760px)">
+        <h2 class="h" style="margin-bottom:24px;font-size:clamp(44px,6.5vw,68px)">Writing &amp; video</h2>
+        <!-- Featured essay row: hidden until Amina sends the title, publication and year. -->
+        <div class="row"><div class="serif" style="font-style:italic;font-size:22px">Feeling Machines</div><p class="body" style="margin:0">Newsletter on affective computing. <a href="https://feelingmachines.substack.com/">feelingmachines.substack.com</a></p></div>
+        <div class="row"><div class="serif" style="font-style:italic;font-size:22px">Bimbollectual</div><p class="body" style="margin:0">Newsletter on sociology, philosophy and internet culture. <a href="https://bimbollectual.com/">bimbollectual.com</a></p></div>
+        <div class="row"><div class="serif" style="font-style:italic;font-size:22px">Video</div><p class="body" style="margin:0">Interviews and short essays on AI and the people building it. <a href="https://www.youtube.com/@amina-io">youtube.com/@amina-io</a></p></div>
+      </div>
+    </section>
+
+    <!-- 4 CONTACT -->
+    <section class="panel center" data-panel="contact" aria-label="Contact">
+      <div class="card sheet raised" style="width:min(100%,680px);display:flex;flex-direction:column;gap:14px">
+        <h2 class="h" style="font-size:clamp(48px,7vw,72px)">Work with me</h2>
+        <p class="lede" style="margin:0">Open to roles, research collaborations and speaking. The fastest way to reach me is email.</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:6px">
+          <a class="email" href="mailto:hello@amina-io.com" style="text-decoration:none">hello@amina-io.com</a>
+          <button class="pill copy-email" style="font-size:13px">copy email</button>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:8px;font-size:15px">
+          <a href="https://x.com/amina_io">X — @amina_io</a>
+          <a href="https://instagram.com/bimbollectual">Instagram — @bimbollectual</a>
+          <a href="https://www.youtube.com/@amina-io">YouTube — @amina-io</a>
+        </div>
+      </div>
+    </section>
+
   </div>
-  <a class="back" href="#">← back</a>
-</section>
 </main>
 
 <script>
-  var views = ['home', 'about', 'works', 'contact'];
-  function route() {
-    var h = (location.hash || '').replace('#', '');
-    if (views.indexOf(h) === -1 || h === '') h = 'home';
-    views.forEach(function (v) {
-      document.getElementById(v).classList.toggle('on', v === h);
-    });
-    window.scrollTo(0, 0);
+(() => {
+  const ORDER = ['home', 'work', 'about', 'writing', 'contact'];
+  const ALIASES = { works: 'work' };   // old homepage used #works
+  const body = document.body;
+  const track = document.querySelector('.track');
+  const bg = document.querySelector('.bg');
+  const links = document.getElementById('top-links');
+  const toggle = document.querySelector('.menu-toggle');
+
+  function closeMenu() {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.textContent = 'menu';
   }
-  document.querySelectorAll('.about-nav span').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var k = b.getAttribute('data-tab');
-      document.querySelectorAll('.about-nav span').forEach(function (x) { x.classList.toggle('on', x === b); x.setAttribute('aria-selected', x === b); });
-      document.querySelectorAll('.tabpane').forEach(function (p) { p.classList.toggle('on', p.getAttribute('data-pane') === k); });
+
+  function show(name, push) {
+    name = ALIASES[name] || name;
+    if (!ORDER.includes(name)) name = 'home';
+    const i = ORDER.indexOf(name);
+    body.dataset.page = name;
+    track.style.setProperty('--track-shift', (-100 * i) + '%');
+    bg.style.setProperty('--bg-shift', (-2 * i) + '%');
+    document.querySelectorAll('.panel').forEach(p => {
+      const on = p.dataset.panel === name;
+      p.classList.toggle('on', on);
+      p.inert = !on;               // keep off-screen panels out of tab order
+      if (on) p.scrollTop = 0;
     });
-  });
-  document.querySelectorAll('.about-nav span').forEach(function (b) {
-    b.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); b.click(); } });
-  });
-  var tlNodes = Array.prototype.slice.call(document.querySelectorAll('.tl-node'));
-  function tlGo(i) {
-    tlNodes.forEach(function (n, j) { n.classList.toggle('on', j === i); n.setAttribute('aria-selected', j === i); });
-    document.querySelectorAll('.tl-pane').forEach(function (p, j) { p.classList.toggle('on', j === i); });
+    links.querySelectorAll('[data-go]').forEach(b => {
+      const active = b.dataset.go === name || (b.dataset.go === 'work' && name === 'writing');
+      active ? b.setAttribute('aria-current', 'page') : b.removeAttribute('aria-current');
+    });
+    closeMenu();
+    if (push) history.pushState(null, '', name === 'home' ? location.pathname : '#' + name);
   }
-  tlNodes.forEach(function (n, i) {
-    n.addEventListener('click', function () { tlGo(i); });
-    n.addEventListener('keydown', function (e) {
-      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
-      if (d) { var k = (i + d + tlNodes.length) % tlNodes.length; tlGo(k); tlNodes[k].focus(); }
-    });
+
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-go]');
+    if (b) show(b.dataset.go, true);
   });
-  window.addEventListener('hashchange', route);
-  route();
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? 'close' : 'menu';
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && links.classList.contains('open')) { closeMenu(); toggle.focus(); }
+  });
+  document.querySelector('.copy-email').addEventListener('click', async e => {
+    const btn = e.currentTarget;
+    try { await navigator.clipboard.writeText('hello@amina-io.com'); btn.textContent = 'copied'; } catch (_) {}
+  });
+  window.addEventListener('popstate', () => show(location.hash.slice(1) || 'home', false));
+  show(location.hash.slice(1) || 'home', false);
+})();
 </script>
 </body>
 </html>
